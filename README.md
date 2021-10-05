@@ -14,4 +14,4 @@ uic_covid_contact_tracing
 - Dana Liang
 
 # Database description
-UIC_COVID_TRACING_DATABASE is a db which will provide information on covid test results for faculty and students attending UIC.
+UIC_COVID_TRACING_DATABASE is a databseb which will provide information on covid test results for faculty and students attending UIC. Entities will include people, events,  and organizations.
