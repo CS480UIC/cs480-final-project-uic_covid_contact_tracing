@@ -66,7 +66,8 @@ Attributes:
 * uin 1-1(1)
 
  <br>
-## Relationships
+ 
+# Relationships
 
 person_takes_covid_test
 * Maxima: many-many. Many people can take many COVID-19 tests.
