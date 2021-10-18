@@ -93,4 +93,20 @@ student_lives_in_student_housing
 * Maxima: many-one. Many people can be in one dorm.
 * Minima: zero-zero. A person can not be in a dorm.
 
+# Cascade and Restrict Rules
+person_has_contact_information
+* Cascade on Person's primary key update and delete 
+
+person_takes_covid_test
+* Cascade on Person's primary key update and delete 
+* Restrict on foreign key insert and update 
+
+person_enrolls_in_course
+* Cascade on Person's primary key update and delete 
+* Restrict on foreign key insert and update 
+
+person_is_in_organization
+* Cascade on Person's primary key update and delete 
+* Restrict on foreign key insert and update 
+
 
