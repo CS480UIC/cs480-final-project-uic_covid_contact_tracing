@@ -36,15 +36,7 @@
 	<c:choose>
 		<c:when test="${empty sessionScope.session_user }">
 			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">Login</a> |&nbsp; 
-			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a> |&nbsp; 
-			<a href="<c:url value='/jsps/user/person_entity.jsp'/>" target="_parent">Person</a> |&nbsp; 
-			<a href="<c:url value='/jsps/user/student_entity.jsp'/>" target="_parent">Student</a> |&nbsp;
-			<a href="<c:url value='/jsps/user/employee_entity.jsp'/>" target="_parent">Employee</a> |&nbsp;
-			<a href="<c:url value='/jsps/user/course_entity.jsp'/>" target="_parent">Course</a> |&nbsp;
-			<a href="<c:url value='/jsps/user/organization_entity.jsp'/>" target="_parent">Organization</a> |&nbsp;
-			<a href="<c:url value='/jsps/user/studentHousing_entity.jsp'/>" target="_parent">Student_housing</a> |&nbsp;
-			<a href="<c:url value='/jsps/user/contactInfo_entity.jsp'/>" target="_parent">Contact_information</a> |&nbsp;
-			
+			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a> |&nbsp; 		
 	
 		</c:when>
 		<c:otherwise>
@@ -52,7 +44,13 @@
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
 			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
-
+			<a href="<c:url value='/jsps/user/person_entity.jsp'/>" target="body">Person</a> |&nbsp; 
+			<a href="<c:url value='/jsps/user/student_entity.jsp'/>" target="body">Student</a> |&nbsp;
+			<a href="<c:url value='/jsps/user/employee_entity.jsp'/>" target="body">Employee</a> |&nbsp;
+			<a href="<c:url value='/jsps/user/course_entity.jsp'/>" target="body">Course</a> |&nbsp;
+			<a href="<c:url value='/jsps/user/organization_entity.jsp'/>" target="body">Organization</a> |&nbsp;
+			<a href="<c:url value='/jsps/user/studentHousing_entity.jsp'/>" target="body">Student_housing</a> |&nbsp;
+			<a href="<c:url value='/jsps/user/contactInfo_entity.jsp'/>" target="body">Contact_information</a> |&nbsp;
 		</c:otherwise>
 	</c:choose>
 
