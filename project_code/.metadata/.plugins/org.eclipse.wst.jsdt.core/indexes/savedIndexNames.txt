@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+/Users/jsneak/cs480/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-3670915316.index
-2351522647.index
-3228973176.index
-3346749516.index
-671053819.index
-4121801170.index
