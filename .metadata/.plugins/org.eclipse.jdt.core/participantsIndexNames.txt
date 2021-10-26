@@ -1,7 +1,0 @@
-INDEX VERSION 1.131
-/Users/jsneak/cs480/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/107495118.index
-/CS480Template/src/main/java
-/Users/jsneak/cs480/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2133566123.index
-/CS480Template/src/main/java
-/Users/jsneak/cs480/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3828657641.index
-/CS480Template/src/main/java
