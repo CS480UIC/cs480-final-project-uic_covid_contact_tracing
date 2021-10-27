@@ -71,24 +71,32 @@ Delete:
 contact_information:
 
 Create:
+<img width="1043" alt="Screen Shot 2021-10-27 at 12 54 45 AM" src="https://user-images.githubusercontent.com/17222641/139007771-154bb6f9-05dd-47df-8f6d-941d0326721c.png">
 
 Read:
+<img width="1043" alt="Screen Shot 2021-10-27 at 12 54 57 AM" src="https://user-images.githubusercontent.com/17222641/139007795-26a4856e-0e12-49c9-9272-11515659b6f1.png">
 
 Update:
+<img width="1043" alt="Screen Shot 2021-10-27 at 12 55 06 AM" src="https://user-images.githubusercontent.com/17222641/139007818-1f8bf2da-572b-4cb6-b39c-dc74014c00e4.png">
 
 Delete:
+<img width="1043" alt="Screen Shot 2021-10-27 at 12 55 16 AM" src="https://user-images.githubusercontent.com/17222641/139007838-145efa40-7dcc-4cbc-aac3-ca5103a45e7c.png">
 
 
 
 covid_test:
 
 Create:
+<img width="1043" alt="Screen Shot 2021-10-27 at 12 55 24 AM" src="https://user-images.githubusercontent.com/17222641/139007847-fb84fb34-7505-4d49-9fa2-f5bf37f3e6a9.png">
 
 Read:
+<img width="1043" alt="Screen Shot 2021-10-27 at 12 55 32 AM" src="https://user-images.githubusercontent.com/17222641/139007869-aef908a8-f4ff-4fd5-a978-ead35dca128f.png">
 
 Update:
+<img width="1043" alt="Screen Shot 2021-10-27 at 12 55 42 AM" src="https://user-images.githubusercontent.com/17222641/139007881-be6c5fd3-dbef-418b-9c47-26ab4a06785d.png">
 
 Delete:
+<img width="1043" alt="Screen Shot 2021-10-27 at 12 55 57 AM" src="https://user-images.githubusercontent.com/17222641/139007911-0a5938bf-8539-412f-8222-6ceb8d406618.png">
 
 
 
