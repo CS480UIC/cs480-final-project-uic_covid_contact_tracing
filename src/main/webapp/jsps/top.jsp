@@ -52,10 +52,10 @@
 			<a href="<c:url value='/jsps/studentEntity/studentEntityupdate.jsp'/>" target="body">Update Student</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/studentEntity/studentEntitydelete.jsp'/>" target="body">Delete Student</a> |&nbsp;&nbsp;
 			<br>
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Create Employee</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Read Employee</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Update Employee</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Delete Employee</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/employeeEntity/employeeEntitycreate.jsp'/>" target="body">Create Employee</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/employeeEntity/employeeEntityread.jsp'/>" target="body">Read Employee</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/employeeEntity/employeeEntityupdate.jsp'/>" target="body">Update Employee</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/employeeEntity/employeeEntitydelete.jsp'/>" target="body">Delete Employee</a> |&nbsp;&nbsp;
 			<br>
 			<a href="<c:url value='/jsps/courseEntity/courseEntitycreate.jsp'/>" target="body">Create Course</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/courseEntity/courseEntityread.jsp'/>" target="body">Read Course</a> |&nbsp;&nbsp;
