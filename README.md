@@ -29,6 +29,7 @@ Home Screen:
 
 
 student:
+
 Create:
 
 Read:
@@ -40,6 +41,7 @@ Delete:
 
 
 employee:
+
 Create:
 
 Read:
@@ -51,6 +53,7 @@ Delete:
 
 
 course:
+
 Create:
 
 Read:
@@ -62,6 +65,7 @@ Delete:
 
 
 contact_information:
+
 Create:
 
 Read:
@@ -73,6 +77,7 @@ Delete:
 
 
 covid_test:
+
 Create:
 
 Read:
@@ -84,6 +89,7 @@ Delete:
 
 
 student_housing;
+
 Create:
 
 Read:
