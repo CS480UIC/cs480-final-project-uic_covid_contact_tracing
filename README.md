@@ -31,12 +31,16 @@ Home Screen:
 student:
 
 Create:
+<img width="1043" alt="Screen Shot 2021-10-27 at 12 50 51 AM" src="https://user-images.githubusercontent.com/17222641/139007372-f6113bf9-32f6-4f86-9cdb-488948f77cea.png">
 
 Read:
+<img width="1043" alt="Screen Shot 2021-10-27 at 12 51 02 AM" src="https://user-images.githubusercontent.com/17222641/139007388-fc37ccc6-d2eb-4a4a-9629-6a2c646d506f.png">
 
 Update:
+<img width="1043" alt="Screen Shot 2021-10-27 at 12 51 11 AM" src="https://user-images.githubusercontent.com/17222641/139007410-968ee22f-43f1-4a5f-a41f-c55d016dd57f.png">
 
 Delete:
+<img width="1043" alt="Screen Shot 2021-10-27 at 12 51 19 AM" src="https://user-images.githubusercontent.com/17222641/139007430-02612208-1c04-47d3-8026-033337e45131.png">
 
 
 
