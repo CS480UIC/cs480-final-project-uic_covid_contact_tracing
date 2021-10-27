@@ -59,12 +59,16 @@ Delete:
 course:
 
 Create:
+<img width="1043" alt="Screen Shot 2021-10-27 at 1 10 56 AM" src="https://user-images.githubusercontent.com/17222641/139009488-a58c4e5b-7f0d-4a09-a8da-0971eba79a27.png">
 
 Read:
+<img width="1043" alt="Screen Shot 2021-10-27 at 1 11 05 AM" src="https://user-images.githubusercontent.com/17222641/139009503-fc53bae6-a27b-42f1-82c3-b39dcfd0b2b1.png">
 
 Update:
+<img width="1043" alt="Screen Shot 2021-10-27 at 1 11 13 AM" src="https://user-images.githubusercontent.com/17222641/139009520-4260d935-526a-4d9b-83ed-e7259e677863.png">
 
 Delete:
+<img width="1043" alt="Screen Shot 2021-10-27 at 1 11 20 AM" src="https://user-images.githubusercontent.com/17222641/139009534-082839e1-131c-4d39-bdf1-a6e132a56be3.png">
 
 
 
