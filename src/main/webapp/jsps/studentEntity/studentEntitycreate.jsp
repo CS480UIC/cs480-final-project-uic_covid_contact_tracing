@@ -22,21 +22,29 @@
   
   <body>
   <h1>studentEntity Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	UIN    :<input type="text" name="username" value="${form.uin }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/studentEntityServletCreate'/>" method="post">
+	UIN    :<input type="text" name="uin" value="${form.uin }"/>
+	<span style="color: red; font-weight: 900">${errors.uin }</span>
 	<br/>
-	Vaccination Status：<input type="password" name="password" value="${form.vaccstatus }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	
+	Vaccination Status：<br>
+	<input type="radio" id="0" name="vaccstatus0" value="${form.vaccstatus0 }">
+	  <label for="0">Not Vaccinated</label><br>
+  	<input type="radio" id="1" name="vaccstatus1" value="${form.vaccstatus1 }">
+	  <label for="1">One of Two doses</label><br>
+  	<input type="radio" id="2" name="vaccstatus2" value="${form.vaccstatus2 }">
+	  <label for="2">Fully Vaccinated</label>
+	<span style="color: red; font-weight: 900">${errors.vaccstatus }</span>
 	<br/>
-	First Name	：<input type="text" name="email" value="${form.fName }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	
+	First Name	：<input type="text" name="fName" value="${form.fName }"/>
+	<span style="color: red; font-weight: 900">${errors.fName }</span>
 	<br/>
-	Last Name	：<input type="text" name="email" value="${form.lName }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Last Name	：<input type="text" name="lName" value="${form.lName }"/>
+	<span style="color: red; font-weight: 900">${errors.lName }</span>
 	<br/>
-	Department Name	：<input type="text" name="email" value="${form.deptName }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Department Name	：<input type="text" name="deptName" value="${form.deptName }"/>
+	<span style="color: red; font-weight: 900">${errors.deptName }</span>
 	<br/>
 	<input type="submit" value="Create studentEntity"/>
 </form>

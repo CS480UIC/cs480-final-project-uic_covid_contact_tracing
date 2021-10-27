@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for studentEntity </h1>
     <br>
-	<a href="<c:url value='/jsps/entity1/studentEntitycreate.jsp'/>" target="_parent">Create studentEntity</a> |&nbsp; 
-	<a href="<c:url value='/jsps/entity1/studentEntityread.jsp'/>" target="_parent">Read studentEntity</a> |&nbsp;
-	<a href="<c:url value='/jsps/entity1/studentEntityupdate.jsp'/>" target="_parent">Update studentEntity</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/entity1/studentEntitydelete.jsp'/>" target="_parent">Delete studentEntity</a>	
+	<a href="<c:url value='/jsps/studentEntity/studentEntitycreate.jsp'/>" target="_parent">Create studentEntity</a> |&nbsp; 
+	<a href="<c:url value='/jsps/studentEntity/studentEntityread.jsp'/>" target="_parent">Read studentEntity</a> |&nbsp;
+	<a href="<c:url value='/jsps/studentEntity/studentEntityupdate.jsp'/>" target="_parent">Update studentEntity</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/studentEntity/studentEntitydelete.jsp'/>" target="_parent">Delete studentEntity</a>	
 	    
   </body>
 </html>
