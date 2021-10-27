@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Delete Entity</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,20 +22,12 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
-	<br/>
-	
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
-	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
-	<br/>
-	<input type="submit" value="Delete Entity1"/>
-</form>
-
-</body>
+    <h1>CRUD operations for studentEntity </h1>
+    <br>
+	<a href="<c:url value='/jsps/entity1/studentEntitycreate.jsp'/>" target="_parent">Create studentEntity</a> |&nbsp; 
+	<a href="<c:url value='/jsps/entity1/studentEntityread.jsp'/>" target="_parent">Read studentEntity</a> |&nbsp;
+	<a href="<c:url value='/jsps/entity1/studentEntityupdate.jsp'/>" target="_parent">Update studentEntity</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/entity1/studentEntitydelete.jsp'/>" target="_parent">Delete studentEntity</a>	
+	    
+  </body>
 </html>

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Entity1 Create</title>
+    <title>studentEntity Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,18 +21,24 @@
   </head>
   
   <body>
-  <h1>Entity1 Create</h1>
+  <h1>studentEntity Create</h1>
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	User    :<input type="text" name="username" value="${form.username }"/>
+	UIN    :<input type="text" name="username" value="${form.uin }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	Password：<input type="password" name="password" value="${form.password }"/>
+	Vaccination Status：<input type="password" name="password" value="${form.vaccstatus }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
+	First Name	：<input type="text" name="email" value="${form.fName }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	<input type="submit" value="Create Entity1"/>
+	Last Name	：<input type="text" name="email" value="${form.lName }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/>
+	Department Name	：<input type="text" name="email" value="${form.deptName }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/>
+	<input type="submit" value="Create studentEntity"/>
 </form>
   </body>
 </html>
