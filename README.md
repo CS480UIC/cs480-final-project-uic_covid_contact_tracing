@@ -47,12 +47,16 @@ Delete:
 employee:
 
 Create:
+<img width="1043" alt="Screen Shot 2021-10-27 at 1 16 06 AM" src="https://user-images.githubusercontent.com/17222641/139010155-784e9b8b-2a84-488e-9117-622574180ccd.png">
 
 Read:
+<img width="1043" alt="Screen Shot 2021-10-27 at 1 16 18 AM" src="https://user-images.githubusercontent.com/17222641/139010173-2436232b-943a-469c-bfa8-fa1776328c58.png">
 
 Update:
+<img width="1043" alt="Screen Shot 2021-10-27 at 1 16 25 AM" src="https://user-images.githubusercontent.com/17222641/139010187-839e0164-005f-4654-96e3-9fe53fefdc58.png">
 
 Delete:
+<img width="1043" alt="Screen Shot 2021-10-27 at 1 17 22 AM" src="https://user-images.githubusercontent.com/17222641/139010269-5c8e6490-24cd-4f6c-9a11-a74dab82739f.png">
 
 
 
