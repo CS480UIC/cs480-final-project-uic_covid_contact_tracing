@@ -44,7 +44,7 @@
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
 			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/studentEntity/main.jsp'/>" target="body">CRUD Student</a> |&nbsp;
+			<a href="<c:url value='/jsps/studentEntity/menu.jsp'/>" target="body">CRUD Student</a> |&nbsp;
 			<a href="<c:url value='/jsps/user/employee_entity.jsp'/>" target="body">Employee</a> |&nbsp;
 			<a href="<c:url value='/jsps/user/course_entity.jsp'/>" target="body">Course</a> |&nbsp;
 			<a href="<c:url value='/jsps/user/organization_entity.jsp'/>" target="body">Organization</a> |&nbsp;

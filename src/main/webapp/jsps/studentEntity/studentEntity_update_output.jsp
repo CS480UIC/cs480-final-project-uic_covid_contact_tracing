@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Update Entity</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -24,22 +24,22 @@
   <h1>Update Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username1" value="${personEntity.username }" disabled/>
+	UIN    :<input type="text" name="uin" value="${studentEntity.uin }" disabled/>
 	<br/>
 	
-	Password：<input type="text" name="password1" value="${personEntity.password }" disabled />
+	First Name：<input type="text" name="firat_name" value="${studentEntity.first_name }" disabled />
 	<br/>
-	Email	：<input type="text" name="email1" value="${personEntity.email }" disabled/>
+	Last Name	：<input type="text" name="last_name" value="${studentEntity.last_name }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="username" value="${personEntity.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
+	Department Name：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
+	Vaccination Status	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
 	<input type="submit" value="Update Entity1"/>
