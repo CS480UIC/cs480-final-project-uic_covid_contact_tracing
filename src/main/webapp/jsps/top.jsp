@@ -40,16 +40,43 @@
 	
 		</c:when>
 		<c:otherwise>
-			Hello uwu：${sessionScope.session_user.username };
+			Hello：${sessionScope.session_user.username };
+			<!-- 
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp; 
+			-->
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/studentEntity/menu.jsp'/>" target="body">CRUD Student</a> |&nbsp;
-			<a href="<c:url value='/jsps/user/employee_entity.jsp'/>" target="body">Employee</a> |&nbsp;
-			<a href="<c:url value='/jsps/user/course_entity.jsp'/>" target="body">Course</a> |&nbsp;
-			<a href="<c:url value='/jsps/user/organization_entity.jsp'/>" target="body">Organization</a> |&nbsp;
-			<a href="<c:url value='/jsps/user/studentHousing_entity.jsp'/>" target="body">Student_housing</a> |&nbsp;
-			<a href="<c:url value='/jsps/user/contactInfo_entity.jsp'/>" target="body">Contact_information</a> |&nbsp;
+			<br>
+			<a href="<c:url value='/jsps/studentEntity/studentEntitycreate.jsp'/>" target="body">Create Student</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/studentEntity/studentEntityread.jsp'/>" target="body">Read Student</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/studentEntity/studentEntityupdate.jsp'/>" target="body">Update Student</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/studentEntity/studentEntitydelete.jsp'/>" target="body">Delete Student</a> |&nbsp;&nbsp;
+			<br>
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Create Employee</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Read Employee</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Update Employee</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Delete Employee</a> |&nbsp;&nbsp;
+			<br>
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Create Course</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Read Course</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Update Course</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Delete Course</a> |&nbsp;&nbsp;
+			<br>
+			<a href="<c:url value='/jsps/contactInformationEntity/contactInformationEntitycreate.jsp'/>" target="body">Create Contact_information</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/contactInformationEntity/contactInformationEntityread.jsp'/>" target="body">Read Contact_information</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/contactInformationEntity/contactInformationEntityupdate.jsp'/>" target="body">Update Contact_information</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/contactInformationEntity/contactInformationEntitydelete.jsp'/>" target="body">Delete Contact_information</a> |&nbsp;&nbsp;
+			<br>
+			<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntitycreate.jsp'/>" target="body">Create Covid_test</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntityread.jsp'/>" target="body">Read Covid_test</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntityupdate.jsp'/>" target="body">Update Covid_test</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntitydelete.jsp'/>" target="body">Delete Covid_test</a> |&nbsp;&nbsp;
+			<br>
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Create Student_housing</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Read Student_housing</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Update Student_housing</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Delete Student_housing</a> |&nbsp;&nbsp;
+			<br>
 		</c:otherwise>
 	</c:choose>
 
