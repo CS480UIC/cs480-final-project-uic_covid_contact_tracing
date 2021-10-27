@@ -72,10 +72,10 @@
 			<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntityupdate.jsp'/>" target="body">Update Covid_test</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntitydelete.jsp'/>" target="body">Delete Covid_test</a> |&nbsp;&nbsp;
 			<br>
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Create Student_housing</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Read Student_housing</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Update Student_housing</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">Delete Student_housing</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/studentHousingEntity/studentHousingEntitycreate.jsp'/>" target="body">Create Student_housing</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/studentHousingEntity/studentHousingEntityread.jsp'/>" target="body">Read Student_housing</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/studentHousingEntity/studentHousingEntityupdate.jsp'/>" target="body">Update Student_housing</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/studentHousingEntity/studentHousingEntitydelete.jsp'/>" target="body">Delete Student_housing</a> |&nbsp;&nbsp;
 			<br>
 		</c:otherwise>
 	</c:choose>
