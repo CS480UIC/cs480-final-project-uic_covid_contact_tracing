@@ -103,11 +103,15 @@ Delete:
 student_housing;
 
 Create:
+<img width="1043" alt="Screen Shot 2021-10-27 at 1 03 59 AM" src="https://user-images.githubusercontent.com/17222641/139008747-3b3ec702-b6cd-4eb6-a70c-03d7ad3a911a.png">
 
 Read:
+<img width="1043" alt="Screen Shot 2021-10-27 at 1 04 11 AM" src="https://user-images.githubusercontent.com/17222641/139008760-1cafaf46-f23c-4e66-8be3-7d58a8fe35b1.png">
 
 Update:
+<img width="1043" alt="Screen Shot 2021-10-27 at 1 04 23 AM" src="https://user-images.githubusercontent.com/17222641/139008782-ef4d1e65-f764-4f29-9cf7-ea28161d70c8.png">
 
 Delete:
+<img width="1043" alt="Screen Shot 2021-10-27 at 1 04 30 AM" src="https://user-images.githubusercontent.com/17222641/139008797-7489f539-2913-4741-a5dc-fce4117877cc.png">
 
 
