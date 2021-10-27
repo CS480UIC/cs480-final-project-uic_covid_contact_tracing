@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>studentEntity Create</title>
+    <title>covidTestingEntity Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>studentEntity Create</h1>
+  <h1>covidTestingEntity Create</h1>
 <form action="<c:url value='/covidTestingEntityCreate'/>" method="post">
 	UIN    :<input type="text" name="username" value="${form.uin }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
