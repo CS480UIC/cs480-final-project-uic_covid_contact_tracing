@@ -1,0 +1,6 @@
+Timestamp,uin,vaccination_status,first_name,last_name,student_living_status,student_major_name,dorm_id
+10/18/2021 13:23:43,687695021,1,Lyle,Levy,1,Computer Science,JST
+10/18/2021 13:24:51,648394052,2,Woodie,Larsen,0,Biology,NULL
+10/18/2021 13:29:37,674849301,0,Billy,Good,0,Business Administration,NULL
+10/18/2021 13:30:40,674393028,2,Delilah,Marx,1,English,CTY
+10/18/2021 13:31:58,647389410,2,Ashley,Jensen,0,Integrated Health Sciences,NULL
