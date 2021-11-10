@@ -109,4 +109,16 @@ person_is_in_organization
 * Cascade on Person's primary key update and delete 
 * Restrict on foreign key insert and update 
 
+Dependencies
+*contact_information_belongsto_person: contact_information is dependent on person
+*covid_test_belongsto_person: covid_test is dependent on person
+*course_belongsto_person: course is dependent on person
+*student_housing_belongsto_person: student_housing is dependent on person
+*organization_belongsto_person: organization is dependent on person
+
+Supertypes and Subtypes
+*student_isA_person: student is a subtype of person
+*employee_isA_person: employee is a subtype of person
+
+
 
