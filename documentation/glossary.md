@@ -117,6 +117,7 @@ Dependencies
 * student_housing_belongsto_person: student_housing is dependent on person
 * organization_belongsto_person: organization is dependent on person
 
+<br>
 Supertypes and Subtypes
 * student_isA_person: student is a subtype of person
 * employee_isA_person: employee is a subtype of person
