@@ -1,4 +1,4 @@
-CREATE DATABASE uic_covid_contact_tracing;
+CREATE DATABASE uic_covid_contact_tracing;s
 use uic_covid_contact_tracing;
 
 CREATE TABLE student (
@@ -8,7 +8,7 @@ CREATE TABLE student (
     last_name VARCHAR(20) NOT NULL,
     student_living_status TINYINT NOT NULL,
     student_major_name VARCHAR(30),
-    dorm_id VARCHAR(10) NOT NULL,
+    dorm_id VARCHAR(10),
     PRIMARY KEY (uin)
 		
 );

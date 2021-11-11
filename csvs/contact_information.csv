@@ -1,6 +1,6 @@
-Timestamp,email_address,phone_number,address,uin
-10/18/2021 12:29:58,johndoe@uic.edu,3122134567," 225 S Canal St, Chicago, IL 60606",485732913
-10/18/2021 12:30:38,janedoe@uic.edu,773456123,"1664 S Blue Island Ave, Chicago, IL 60608",423983243
-10/18/2021 12:31:19,joejo2@uic.edu,6465789821,"500 W Madison St, Chicago, IL 60661",873298374
-10/18/2021 12:32:18,morristu8@uic.edu,3127690821,"1035 W Randolph St, Chicago, IL 60607",786345721
-10/18/2021 12:33:08,jreyes21@uic.edu,7738885400,"1380 W Lake St, Chicago, IL 60607",683903121
+email_address,phone_number,address,uin
+johndoe@uic.edu,3122134567,"225 S Canal St, Chicago, IL 60606",485732913
+janedoe@uic.edu,773456123,"1664 S Blue Island Ave, Chicago, IL 60608",423983243
+joejo2@uic.edu,6465789821,"500 W Madison St, Chicago, IL 60661",873298374
+morristu8@uic.edu,3127690821,"1035 W Randolph St, Chicago, IL 60607",786345721
+jreyes21@uic.edu,7738885400,"1380 W Lake St, Chicago, IL 60607",683903121
