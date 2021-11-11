@@ -13,15 +13,6 @@ CREATE TABLE student (
 		
 );
 
-CREATE TABLE employee (
-	uin INTEGER UNSIGNED NOT NULL UNIQUE,
-    vaccination_status TINYINT NOT NULL,
-    first_name VARCHAR(20) NOT NULL,
-    last_name VARCHAR(20) NOT NULL,
-    department_name VARCHAR(30),
-    PRIMARY KEY (uin)
-);
-
 CREATE TABLE covid_test (
 	uin INTEGER UNSIGNED NOT NULL UNIQUE,
     test_date DATE NOT NULL,
