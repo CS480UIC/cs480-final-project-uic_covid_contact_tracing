@@ -1,5 +1,5 @@
-CREATE DATABASE uic_covid_contact_tracing;s
-use uic_covid_contact_tracing;
+-- CREATE DATABASE uic_covid_contact_tracing;
+USE uic_covid_contact_tracing;
 
 CREATE TABLE student (
 	uin INTEGER UNSIGNED NOT NULL UNIQUE,
@@ -14,18 +14,18 @@ CREATE TABLE student (
 );
 
 CREATE TABLE covid_test (
-	uin INTEGER UNSIGNED NOT NULL UNIQUE,
+	uin INTEGER UNSIGNED NOT NULL,
     test_date DATE NOT NULL,
     result_date DATE NOT NULL,
     test_result TINYINT NOT NULL,
-    PRIMARY KEY (uin),
+    PRIMARY KEY (uin, test_date),
     FOREIGN KEY (uin) REFERENCES student(uin)
 		ON UPDATE CASCADE
         ON DELETE CASCADE
 );
 
 CREATE TABLE course (
-	uin INTEGER UNSIGNED NOT NULL UNIQUE,
+	uin INTEGER UNSIGNED NOT NULL,
     course_id SMALLINT UNSIGNED NOT NULL,
     course_location VARCHAR(30) NOT NULL,
     PRIMARY KEY (uin),
@@ -35,10 +35,10 @@ CREATE TABLE course (
 );
 
 CREATE TABLE organization (
-	uin INTEGER UNSIGNED NOT NULL UNIQUE,
-    organization_id SMALLINT UNSIGNED NOT NULL,
-    organization_name VARCHAR(30) NOT NULL,
-    PRIMARY KEY (uin),
+	uin INTEGER UNSIGNED NOT NULL,
+    organization_id MEDIUMINT UNSIGNED NOT NULL,
+    organization_name VARCHAR(100) NOT NULL,
+    PRIMARY KEY (uin, organization_id),
     FOREIGN KEY (uin) REFERENCES student(uin)
 		ON UPDATE CASCADE
         ON DELETE CASCADE
@@ -56,7 +56,7 @@ CREATE TABLE contact_information (
 	uin INTEGER UNSIGNED NOT NULL UNIQUE,
     email_address VARCHAR(50) NOT NULL UNIQUE,
     phone_number VARCHAR(10) UNIQUE,
-    address VARCHAR(50) NOT NULL,
+    address VARCHAR(100) NOT NULL,
     PRIMARY KEY (uin),
     FOREIGN KEY (uin) REFERENCES student(uin)
 		ON UPDATE CASCADE
