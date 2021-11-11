@@ -1,4 +1,4 @@
--- CREATE DATABASE uic_covid_contact_tracing;
+CREATE DATABASE uic_covid_contact_tracing;
 USE uic_covid_contact_tracing;
 
 CREATE TABLE student (
@@ -26,7 +26,7 @@ CREATE TABLE covid_test (
 
 CREATE TABLE course (
 	uin INTEGER UNSIGNED NOT NULL,
-    course_id SMALLINT UNSIGNED NOT NULL,
+    course_id MEDIUMINT UNSIGNED NOT NULL,
     course_location VARCHAR(30) NOT NULL,
     PRIMARY KEY (uin),
     FOREIGN KEY (uin) REFERENCES student(uin)
