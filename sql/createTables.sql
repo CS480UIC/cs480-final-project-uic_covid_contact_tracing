@@ -62,3 +62,14 @@ CREATE TABLE contact_information (
 		ON UPDATE CASCADE
         ON DELETE CASCADE
 );
+
+CREATE TABLE user (
+	username VARCHAR(50),
+	password VARCHAR(50),
+	email VARCHAR(50)
+);
+CREATE TABLE entity1 (
+	username VARCHAR(50),
+	password VARCHAR(50),
+	email VARCHAR(50)
+);
