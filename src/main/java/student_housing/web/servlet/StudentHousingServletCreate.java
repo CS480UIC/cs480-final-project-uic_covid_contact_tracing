@@ -1,4 +1,4 @@
-package course.web.servlet;
+package student_housing.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import course.domain.Course;
-import course.service.CourseException;
-import course.service.CourseService;
+import student_housing.domain.StudentHousing;
+import student_housing.service.StudentHousingException;
+import student_housing.service.StudentHousingService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class CourseServletCreate extends HttpServlet {
+public class StudentHousingServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CourseServletCreate() {
+    public StudentHousingServletCreate() {
         super();
     }
 
@@ -41,9 +41,9 @@ public class CourseServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		CourseService entity1service = new CourseService();
+		StudentHousingService entity1service = new StudentHousingService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Course form = new Course();
+		StudentHousing form = new StudentHousing();
 		List<String> info = new ArrayList<String>();
 
 		for(String name : paramMap.keySet()) {
@@ -51,14 +51,14 @@ public class CourseServletCreate extends HttpServlet {
 			info.add(values[0]);
 		}
 		form.setUin(Integer.parseInt(info.get(3)));
-		form.setCourse_location(info.get(2));
-		form.setCourse_id(Double.parseDouble(info.get(1)));
+		form.setDorm_id(info.get(1));
+		form.setRoom_number(Byte.parseByte(info.get(2)));
 		
 		try {
 			entity1service.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | CourseException e) {
+		} catch (ClassNotFoundException | StudentHousingException e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
 			e.printStackTrace();

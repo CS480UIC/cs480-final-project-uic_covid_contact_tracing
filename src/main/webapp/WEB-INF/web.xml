@@ -315,6 +315,50 @@
     <url-pattern>/CovidTestingServletUpdate</url-pattern>
   </servlet-mapping>
   
+              <servlet>
+    <description></description>
+    <display-name>StudentHousingServletCreate</display-name>
+    <servlet-name>StudentHousingServletCreate</servlet-name>
+    <servlet-class>student_housing.web.servlet.StudentHousingServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentHousingServletCreate</servlet-name>
+    <url-pattern>/StudentHousingServletCreate</url-pattern>
+  </servlet-mapping>
+  
+                <servlet>
+    <description></description>
+    <display-name>StudentHousingServletDelete</display-name>
+    <servlet-name>StudentHousingServletDelete</servlet-name>
+    <servlet-class>student_housing.web.servlet.StudentHousingServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentHousingServletDelete</servlet-name>
+    <url-pattern>/StudentHousingServletDelete</url-pattern>
+  </servlet-mapping>
+  
+                  <servlet>
+    <description></description>
+    <display-name>StudentHousingServletRead</display-name>
+    <servlet-name>StudentHousingServletRead</servlet-name>
+    <servlet-class>student_housing.web.servlet.StudentHousingServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentHousingServletRead</servlet-name>
+    <url-pattern>/StudentHousingServletRead</url-pattern>
+  </servlet-mapping>
+  
+                   <servlet>
+    <description></description>
+    <display-name>StudentHousingServletUpdate</display-name>
+    <servlet-name>StudentHousingServletUpdate</servlet-name>
+    <servlet-class>student_housing.web.servlet.StudentHousingServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentHousingServletUpdate</servlet-name>
+    <url-pattern>/StudentHousingServletUpdate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>findAll</display-name>

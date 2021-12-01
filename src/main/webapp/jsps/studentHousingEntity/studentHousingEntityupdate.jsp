@@ -22,7 +22,7 @@
   
   <body>
   <h1>Update</h1>
-<form action="<c:url value='/covidTestingEntityServletUpdate'/>" method="post">
+<form action="<c:url value='/StudentHousingServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Update UIN   :<input type="text" name="uin" value="${form.uin }"/>
 	<span style="color: red; font-weight: 900">${errors.uin }</span>

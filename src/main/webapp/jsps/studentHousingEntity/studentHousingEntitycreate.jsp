@@ -22,7 +22,7 @@
   
   <body>
   <h1>studentHousingEntity Create</h1>
-<form action="<c:url value='/covidTestingEntityCreate'/>" method="post">
+<form action="<c:url value='/StudentHousingServletCreate'/>" method="post">
 	dorm_id    :<input type="text" name="dorm_id" value="${form.dorm_id }"/>
 	<span style="color: red; font-weight: 900">${errors.dorm_id }</span>
 	<br/>

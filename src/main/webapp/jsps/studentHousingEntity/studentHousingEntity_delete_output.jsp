@@ -23,17 +23,14 @@
   <body>
   <h1>Delete studentHousingEntity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/covidTestingEntityServletDelete'/>" method="post">
+<form action="<c:url value='/StudentHousingServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${covidTestingEntity.uin }"/>
-	UIN    :<input type="text" name="username" value="${covidTestingEntity.uin }" disabled/>
+		<input type="hidden" name="uin" value="${studentHousing.uin }"/>
+	UIN    :<input type="text" name="uin" value="${studentHousing.uin }" disabled/>
 	<br/>
-	
-	Test Date：<input type="text" name="test_date" value="${covidTestingEntity.test_date }" disabled/>
+	Dorm Id：<input type="text" name="dorm_id" value="${studentHousing.dorm_id }" disabled/>
 	<br/>
-	Result Date	：<input type="text" name="result_date" value="${covidTestingEntity.result_date }" disabled/>
-	<br/>
-	Test Result	：<input type="text" name="test_result" value="${covidTestingEntity.test_result }" disabled/>
+	Room Number	：<input type="text" name="room_number" value="${studentHousing.room_number }" disabled/>
 	<br/>
 	<input type="submit" value="Delete covidTestingEntity"/>
 </form>
