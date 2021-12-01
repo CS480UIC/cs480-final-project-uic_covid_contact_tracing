@@ -44,38 +44,18 @@
 			Hello：${sessionScope.session_user.username };
 			
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
-			<!-- 
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp; 
-			-->
+			
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
+			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp; 
+			<!-- <br> -->
+			<a href="<c:url value='/jsps/studentEntity/menu.jsp'/>" target="body">CRUD operations for Students</a> |&nbsp;&nbsp;
+			<!-- <br> -->
+			<a href="<c:url value='/jsps/employeeEntity/menu.jsp'/>" target="body">CRUD operations for Employees</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/courseEntity/menu.jsp'/>" target="body">CRUD operations for Courses</a> |&nbsp;&nbsp;
 			<br>
-			<a href="<c:url value='/jsps/studentEntity/menu.jsp'/>" target="body">CRUD operations for studentEntity</a> |&nbsp;&nbsp;
-			<br>
-			<a href="<c:url value='/jsps/employeeEntity/employeeEntitycreate.jsp'/>" target="body">Create Employee</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/employeeEntity/employeeEntityread.jsp'/>" target="body">Read Employee</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/employeeEntity/employeeEntityupdate.jsp'/>" target="body">Update Employee</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/employeeEntity/employeeEntitydelete.jsp'/>" target="body">Delete Employee</a> |&nbsp;&nbsp;
-			<br>
-			<a href="<c:url value='/jsps/courseEntity/courseEntitycreate.jsp'/>" target="body">Create Course</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/courseEntity/courseEntityread.jsp'/>" target="body">Read Course</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/courseEntity/courseEntityupdate.jsp'/>" target="body">Update Course</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/courseEntity/courseEntitydelete.jsp'/>" target="body">Delete Course</a> |&nbsp;&nbsp;
-			<br>
-			<a href="<c:url value='/jsps/contactInformationEntity/contactInformationEntitycreate.jsp'/>" target="body">Create Contact_information</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/contactInformationEntity/contactInformationEntityread.jsp'/>" target="body">Read Contact_information</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/contactInformationEntity/contactInformationEntityupdate.jsp'/>" target="body">Update Contact_information</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/contactInformationEntity/contactInformationEntitydelete.jsp'/>" target="body">Delete Contact_information</a> |&nbsp;&nbsp;
-			<br>
-			<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntitycreate.jsp'/>" target="body">Create Covid_test</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntityread.jsp'/>" target="body">Read Covid_test</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntityupdate.jsp'/>" target="body">Update Covid_test</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntitydelete.jsp'/>" target="body">Delete Covid_test</a> |&nbsp;&nbsp;
-			<br>
-			<a href="<c:url value='/jsps/studentHousingEntity/studentHousingEntitycreate.jsp'/>" target="body">Create Student_housing</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/studentHousingEntity/studentHousingEntityread.jsp'/>" target="body">Read Student_housing</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/studentHousingEntity/studentHousingEntityupdate.jsp'/>" target="body">Update Student_housing</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/studentHousingEntity/studentHousingEntitydelete.jsp'/>" target="body">Delete Student_housing</a> |&nbsp;&nbsp;
-			<br>
+			<a href="<c:url value='/jsps/contactInformationEntity/menu.jsp'/>" target="body">CRUD operations for Contact Information</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/covidTestingEntity/menu.jsp'/>" target="body">CRUD operations for Covid Tests</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/studentHousingEntity/menu.jsp'/>" target="body">CRUD operations for Student Housings</a> |&nbsp;&nbsp;
 		</c:otherwise>
 	</c:choose>
 
