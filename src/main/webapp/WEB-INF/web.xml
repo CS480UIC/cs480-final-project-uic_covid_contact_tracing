@@ -119,6 +119,17 @@
   
   <servlet>
     <description></description>
+    <display-name>StudentServletDelete</display-name>
+    <servlet-name>StudentServletDelete</servlet-name>
+    <servlet-class>student.web.servlet.StudentServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentServletDelete</servlet-name>
+    <url-pattern>/StudentServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>findAll</display-name>
     <servlet-name>findAll</servlet-name>
     

@@ -22,19 +22,25 @@
   
   <body>
   <h1>Delete Entity</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${studentEntity.uin }"/>
-	User    :<input type="text" name="username" value="${personEntity.username }" disabled/>
-	<br/>
-	
-	Password：<input type="text" name="password" value="${personEntity.password }" disabled/>
-	<br/>
-	Email	：<input type="text" name="email" value="${personEntity.email }" disabled/>
-	<br/>
-	<input type="submit" value="Delete Entity1"/>
-</form>
+	<p style="color: red; font-weight: 900">${msg }</p>
+	<form action="<c:url value='/StudentServletDelete'/>" method="post">
+		<input type="hidden" name="method" value="delete"/>
+		<input type="hidden" name="uin" value="${student.uin }"/>
+		
+		UIN: <input type="text" name="uin" value="${student.uin }" disabled/>
+		<br/>
+		Vaccination Status：<input type="text" name="vaccination_status" value="${student.vaccination_status }" disabled/>
+		<br/>
+		First Name	：<input type="text" name="first_name" value="${student.first_name }" disabled/>
+		<br/>
+		Last Name	：<input type="text" name="last_name" value="${student.last_name }" disabled/>
+		<br/>
+		Major	：<input type="text" name="student_major_name" value="${student.student_major_name }" disabled/>
+		<br/>
+		Dorm	：<input type="text" name="dorm_id" value="${student.dorm_id }" disabled/>
+		<br/>
+		<input type="submit" value="Delete Student"/>
+	</form>
 
 </body>
 </html>
