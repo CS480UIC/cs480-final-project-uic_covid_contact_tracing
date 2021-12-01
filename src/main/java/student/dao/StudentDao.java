@@ -100,24 +100,28 @@ public class StudentDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	/*
 	public void update(Student form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE student SET vaccination_status = ?, first_name = ?, last_name = ?, student_living_status = ?, student_major_name = ?, dorm_id = ? where uin = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUin());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+		    preparestatement.setByte(1, form.getVaccination_status());
+		    preparestatement.setString(2,form.getFirst_name());
+		    preparestatement.setString(3,form.getLast_name());
+	    	preparestatement.setByte(4,form.getStudent_living());
+	    	preparestatement.setString(5, form.getStudent_major_name());
+	    	preparestatement.setString(6, form.getDorm_id());
+	    	preparestatement.setInt(7, form.getUin());
+		    
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
-	*/
+	
 	
 	
 	/**

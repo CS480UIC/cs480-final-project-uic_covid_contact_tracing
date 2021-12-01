@@ -22,12 +22,12 @@
   
   <body>
   <h1>Update</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/StudentServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Update UIN   :<input type="text" name="uin" value="${form.uin }"/>
 	<span style="color: red; font-weight: 900">${errors.uin }</span>
 	<br/>
-	<input type="submit" value="Update studentEntity"/>
+	<input type="submit" value="Update Student"/>
 </form>
   </body>
 </html>

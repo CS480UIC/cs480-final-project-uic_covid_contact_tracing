@@ -128,6 +128,17 @@
     <url-pattern>/StudentServletDelete</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>StudentServletUpdate</display-name>
+    <servlet-name>StudentServletUpdate</servlet-name>
+    <servlet-class>student.web.servlet.StudentServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentServletUpdate</servlet-name>
+    <url-pattern>/StudentServletUpdate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>findAll</display-name>

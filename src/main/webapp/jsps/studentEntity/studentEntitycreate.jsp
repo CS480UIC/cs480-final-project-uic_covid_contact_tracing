@@ -37,10 +37,10 @@
 	<span style="color: red; font-weight: 900">${errors.vaccstatus }</span>
 	<br/>
 	
-	First Name	：<input type="text" name="fName" value="${form.fName }"/>
+	First Name	：<input type="text" name="fName" value="${form.first_name }"/>
 	<span style="color: red; font-weight: 900">${errors.fName }</span>
 	<br/>
-	Last Name	：<input type="text" name="lName" value="${form.lName }"/>
+	Last Name	：<input type="text" name="lName" value="${form.last_name }"/>
 	<span style="color: red; font-weight: 900">${errors.lName }</span>
 	<br/>
 	Student Major：<br/>

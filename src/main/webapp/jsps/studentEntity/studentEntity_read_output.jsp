@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Student Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read Student Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	UIN    :<input type="text" name="uin" value="${student.uin }" disabled/>
