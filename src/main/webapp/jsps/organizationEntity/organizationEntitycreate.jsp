@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Organization Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,17 +21,20 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	User    :<input type="text" name="username" value="${studentEntity.username }" disabled/>
+  <h1>Organization Create</h1>
+<form action="<c:url value='/studentEntityServletCreate'/>" method="post">
+	UIN    :<input type="text" name="uin" value="${form.uin }"/>
+	<span style="color: red; font-weight: 900">${errors.uin }</span>
 	<br/>
-	Password：<input type="text" name="password" value="${studentEntity.password }" disabled/>
+	Organization ID:<input type="text" name="organization_id" value="${form.organization_id }"/>
+	<span style="color: red; font-weight: 900">${errors.organization_id }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${studentEntity.email }" disabled/>
+	
+	Organization Name:<input type="text" name="organization_name" value="${form.organization_name }"/>
+	<span style="color: red; font-weight: 900">${errors.organization_name }</span>
 	<br/>
+	
+	<input type="submit" value="Create Organization"/>
 </form>
-
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
-</body>
+  </body>
 </html>

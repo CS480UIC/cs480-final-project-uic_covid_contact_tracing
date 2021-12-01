@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update employeeEntity</title>
+    <title>Read Organization Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,18 @@
   </head>
   
   <body>
-  <h1>Update</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update UIN   :<input type="text" name="uin" value="${form.uin }"/>
-	<span style="color: red; font-weight: 900">${errors.uin }</span>
-	<br/>
-	<input type="submit" value="Update employeeEntity"/>
-</form>
-  </body>
+  <h1>Read Organization Output</h1>
+	<p style="color: red; font-weight: 900">${msg }</p>
+	<form>
+		UIN    :<input type="text" name="uin" value="${organization.uin }" disabled/>
+		<br/>
+		
+		Organization ID：<input type="text" name="organization_id" value="${organization.organization_id }" disabled />
+		<br/>
+		Organization Name：<input type="text" name="organization_name" value="${organization.organization_name }" disabled/>
+		<br/>
+	</form>
+
+<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
+</body>
 </html>

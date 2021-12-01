@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete employeeEntity</title>
+    <title>Read Organization</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Delete employeeEntity</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete employeeEntity (from UIN)   :<input type="text" name="uin" value="${form.uin }"/>
-	<span style="color: red; font-weight: 900">${errors.uin }</span>
-	<br/>
-	<input type="submit" value="Delete employeeEntity"/>
+  <h1>Read Organization from UIN</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
+<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+	<input type="hidden" name="method" value="regist"/>
+		UIN    :<input type="text" name="uin" value="${organization.uin }" disabled/>
+		<br/>
+	<input type="submit" value="Read Organization"/>
 </form>
   </body>
 </html>

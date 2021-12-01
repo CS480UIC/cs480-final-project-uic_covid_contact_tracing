@@ -229,6 +229,50 @@
   
   <servlet>
     <description></description>
+    <display-name>OrganizationServletCreate</display-name>
+    <servlet-name>OrganizationServletCreate</servlet-name>
+    <servlet-class>organization.web.servlet.OrganizationServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrganizationServletCreate</servlet-name>
+    <url-pattern>/OrganizationServletCreate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>OrganizationServletDelete</display-name>
+    <servlet-name>OrganizationServletDelete</servlet-name>
+    <servlet-class>organization.web.servlet.OrganizationServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrganizationServletDelete</servlet-name>
+    <url-pattern>/OrganizationServletDelete</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>OrganizationServletRead</display-name>
+    <servlet-name>OrganizationServletRead</servlet-name>
+    <servlet-class>organization.web.servlet.OrganizationServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrganizationServletRead</servlet-name>
+    <url-pattern>/OrganizationServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>OrganizationServletUpdate</display-name>
+    <servlet-name>OrganizationServletUpdate</servlet-name>
+    <servlet-class>organization.web.servlet.OrganizationServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrganizationServletUpdate</servlet-name>
+    <url-pattern>/OrganizationServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>findAll</display-name>
     <servlet-name>findAll</servlet-name>
     

@@ -7,7 +7,7 @@
   <head>
     <base href="">
     
-    <title>body</title>
+    <title>Organization CRUD</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for EmployeeEntity </h1>
+    <h1>CRUD operations for Organization </h1>
     <br>
-	<a href="<c:url value='/jsps/employeeEntity/employeeEntitycreate.jsp'/>" target="_parent">Create employeeEntity</a> |&nbsp; 
-	<a href="<c:url value='/jsps/employeeEntity/employeeEntityread.jsp'/>" target="_parent">Read employeeEntity</a> |&nbsp;
-	<a href="<c:url value='/jsps/employeeEntity/employeeEntityupdate.jsp'/>" target="_parent">Update employeeEntity</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/employeeEntity/employeeEntitydelete.jsp'/>" target="_parent">Delete employeeEntity</a>	
+	<a href="<c:url value='/jsps/organizationEntity/organizationEntitycreate.jsp'/>" target="_parent">Create Organization</a> |&nbsp; 
+	<a href="<c:url value='/jsps/organizationEntity/organizationEntityread.jsp'/>" target="_parent">Read Organization</a> |&nbsp;
+	<a href="<c:url value='/jsps/organizationEntity/organizationEntityupdate.jsp'/>" target="_parent">Update Organization</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/organizationEntity/organizationEntitydelete.jsp'/>" target="_parent">Delete Organization</a>	
 	    
   </body>
 </html>
