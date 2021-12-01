@@ -24,13 +24,14 @@
   <h1>Read Entity Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	UIN    :<input type="text" name="uin" value="${covidTestingEntity.uin }" disabled/>
+	UIN    :<input type="text" name="uin" value="${covid.uin }" disabled/>
 	<br/>
-	Test Date：<input type="text" name="test_date" value="${covidTestingEntity.test_date }" disabled/>
+	
+	Test Date：<input type="text" name="test_date" value="${covid.test_date }" disabled />
 	<br/>
-	Result Date	：<input type="text" name="result_date" value="${covidTestingEntity.result_date }" disabled/>
+	Result Date	：<input type="text" name="result_date" value="${covid.result_date }" disabled/>
 	<br/>
-	Test Result	：<input type="text" name="test_result" value="${covidTestingEntity.test_result }" disabled/>
+	Test Result	：<input type="text" name="test_result" value="${covid.test_result }" disabled/>
 	<br/>
 </form>
 

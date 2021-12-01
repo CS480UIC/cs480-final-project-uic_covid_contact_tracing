@@ -22,8 +22,8 @@
   
   <body>
   <h1>covidTestingEntity Create</h1>
-<form action="<c:url value='/covidTestingEntityCreate'/>" method="post">
-	UIN    :<input type="text" name="username" value="${form.uin }"/>
+<form action="<c:url value='/CovidTestingServletCreate'/>" method="post">
+	UIN    :<input type="text" name="uin" value="${form.uin }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
 	Test Date：<input type="text" name="test_date" value="${form.test_date }"/>

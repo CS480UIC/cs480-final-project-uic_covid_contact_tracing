@@ -7,7 +7,7 @@
   <head>
     <base href="">
     
-    <title>body</title>
+    <title>Covid Testing CRUD</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for studentEntity </h1>
+    <h1>CRUD operations for Covid Testing </h1>
     <br>
-	<a href="<c:url value='/jsps/entity1/covidTestingEntitycreate.jsp'/>" target="_parent">Create covidTestingEntity</a> |&nbsp; 
-	<a href="<c:url value='/jsps/entity1/covidTestingEntityread.jsp'/>" target="_parent">Read covidTestingEntity</a> |&nbsp;
-	<a href="<c:url value='/jsps/entity1/covidTestingEntityupdate.jsp'/>" target="_parent">Update covidTestingEntity</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/entity1/covidTestingEntitydelete.jsp'/>" target="_parent">Delete covidTestingEntity</a>	
+	<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntitycreate.jsp'/>" target="_parent">Create covidTestingEntity</a> |&nbsp; 
+	<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntityread.jsp'/>" target="_parent">Read covidTestingEntity</a> |&nbsp;
+	<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntityupdate.jsp'/>" target="_parent">Update covidTestingEntity</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/covidTestingEntity/covidTestingEntitydelete.jsp'/>" target="_parent">Delete covidTestingEntity</a>	
 	    
   </body>
 </html>

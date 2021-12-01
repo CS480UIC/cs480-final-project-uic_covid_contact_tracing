@@ -271,6 +271,50 @@
     <url-pattern>/OrganizationServletUpdate</url-pattern>
   </servlet-mapping>
   
+      <servlet>
+    <description></description>
+    <display-name>CovidTestingServletCreate</display-name>
+    <servlet-name>CovidTestingServletCreate</servlet-name>
+    <servlet-class>covidTesting.web.servlet.CovidTestingServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CovidTestingServletCreate</servlet-name>
+    <url-pattern>/CovidTestingServletCreate</url-pattern>
+  </servlet-mapping>
+  
+        <servlet>
+    <description></description>
+    <display-name>CovidTestingServletDelete</display-name>
+    <servlet-name>CovidTestingServletDelete</servlet-name>
+    <servlet-class>covidTesting.web.servlet.CovidTestingServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CovidTestingServletDelete</servlet-name>
+    <url-pattern>/CovidTestingServletDelete</url-pattern>
+  </servlet-mapping>
+  
+          <servlet>
+    <description></description>
+    <display-name>CovidTestingServletRead</display-name>
+    <servlet-name>CovidTestingServletRead</servlet-name>
+    <servlet-class>covidTesting.web.servlet.CovidTestingServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CovidTestingServletRead</servlet-name>
+    <url-pattern>/CovidTestingServletRead</url-pattern>
+  </servlet-mapping>
+  
+            <servlet>
+    <description></description>
+    <display-name>CovidTestingServletUpdate</display-name>
+    <servlet-name>CovidTestingServletUpdate</servlet-name>
+    <servlet-class>covidTesting.web.servlet.CovidTestingServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CovidTestingServletUpdate</servlet-name>
+    <url-pattern>/CovidTestingServletUpdate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>findAll</display-name>
