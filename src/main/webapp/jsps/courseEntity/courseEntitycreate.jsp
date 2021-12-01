@@ -22,7 +22,7 @@
   
   <body>
   <h1>courseEntity Create</h1>
-<form action="<c:url value='/covidTestingEntityCreate'/>" method="post">
+<form action="<c:url value='/CourseServletCreate'/>" method="post">
 	course_id    :<input type="text" name="course_id" value="${form.course_id }"/>
 	<span style="color: red; font-weight: 900">${errors.course_id }</span>
 	<br/>

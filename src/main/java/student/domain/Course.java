@@ -6,7 +6,7 @@ package student.domain;
  * @author Sean Kim
  * 
  */
-public class Student {
+public class Course {
 	/*
 	 * Correspond to the Student table
 	 */

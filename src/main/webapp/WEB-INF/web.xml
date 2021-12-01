@@ -185,6 +185,50 @@
   
   <servlet>
     <description></description>
+    <display-name>CourseServletCreate</display-name>
+    <servlet-name>CourseServletCreate</servlet-name>
+    <servlet-class>course.web.servlet.CourseServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseServletCreate</servlet-name>
+    <url-pattern>/CourseServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CourseServletDelete</display-name>
+    <servlet-name>CourseServletDelete</servlet-name>
+    <servlet-class>course.web.servlet.CourseServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseServletDelete</servlet-name>
+    <url-pattern>/CourseServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CourseServletRead</display-name>
+    <servlet-name>CourseServletRead</servlet-name>
+    <servlet-class>course.web.servlet.CourseServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseServletRead</servlet-name>
+    <url-pattern>/CourseServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CourseServletUpdate</display-name>
+    <servlet-name>CourseServletUpdate</servlet-name>
+    <servlet-class>course.web.servlet.CourseServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseServletUpdate</servlet-name>
+    <url-pattern>/CourseServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>findAll</display-name>
     <servlet-name>findAll</servlet-name>
     

@@ -1,4 +1,4 @@
-package student.web.servlet;
+package course.web.servlet;
 
 import java.io.IOException;
 
@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import student.dao.CourseDao;
-import student.domain.Course;
+import course.dao.CourseDao;
+import course.domain.Course;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class StudentServletRead extends HttpServlet {
+public class CourseServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public StudentServletRead() {
+    public CourseServletRead() {
         super();
     }
     
@@ -37,11 +37,11 @@ public class StudentServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Course student = null;
-		CourseDao studentDao = new CourseDao();
+		Course course = null;
+		CourseDao courseDao = new CourseDao();
 		
 		try {
-			student = studentDao.findByUIN(Integer.parseInt(request.getParameter("uin")));
+			course = courseDao.findByUIN(Integer.parseInt(request.getParameter("uin")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,14 +50,14 @@ public class StudentServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(!(student.getUin()).equals(null)){
-					System.out.println(student);
-					request.setAttribute("student", student);
-					request.getRequestDispatcher("/jsps/studentEntity/studentEntity_read_output.jsp").forward(request, response);
+		if(!(course.getUin()).equals(null)){
+					System.out.println(course);
+					request.setAttribute("course", course);
+					request.getRequestDispatcher("/jsps/courseEntity/courseEntity_read_output.jsp").forward(request, response);
 			}
 			else{
 			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/studentEntity/studentEntity_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/courseEntity/courseEntity_read_output.jsp").forward(request, response);
 		}
 	}
 }

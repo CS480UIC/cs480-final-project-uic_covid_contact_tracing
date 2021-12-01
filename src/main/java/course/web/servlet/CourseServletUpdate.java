@@ -1,4 +1,4 @@
-package student.web.servlet;
+package course.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,20 +11,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import student.dao.CourseDao;
-import student.domain.Course;
+import course.dao.CourseDao;
+import course.domain.Course;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class StudentServletUpdate extends HttpServlet {
+public class CourseServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public StudentServletUpdate() {
+	public CourseServletUpdate() {
 		super();
 	}
 
@@ -41,13 +41,13 @@ public class StudentServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		CourseDao studentDao = new CourseDao();
-		Course student = null;
+		CourseDao courseDao = new CourseDao();
+		Course course = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				student = studentDao.findByUIN(Integer.parseInt(request.getParameter("uin")));
+				course = courseDao.findByUIN(Integer.parseInt(request.getParameter("uin")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,14 +56,14 @@ public class StudentServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(!(student.getUin()).equals(null)){
-				request.setAttribute("student", student);
-				request.getRequestDispatcher("/jsps/studentEntity/studentEntity_update_output.jsp").forward(request, response);
+			if(!(course.getUin()).equals(null)){
+				request.setAttribute("course", course);
+				request.getRequestDispatcher("/jsps/courseEntity/courseEntity_update_output.jsp").forward(request, response);
 
 			}
 			else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/studentEntity/studentEntity_update_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/courseEntity/courseEntity_update_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -77,21 +77,11 @@ public class StudentServletUpdate extends HttpServlet {
 				info.add(values[0]);
 			}
 			form.setUin(Integer.parseInt(info.get(1)));
-			form.setVaccination_status(Byte.parseByte(info.get(2)));
-			form.setFirst_name(info.get(3));
-			form.setLast_name(info.get(4));
-			form.setStudent_major_name(info.get(5));
-			form.setDorm_id(info.get(6));
-			if(form.getDorm_id() != "NULL") {
-				Integer a = 1;
-				form.setStudent_living(a.byteValue());
-			} else {
-				Integer b = 0;
-				form.setStudent_living(b.byteValue());
-			}
+			form.setCourse_id(Double.parseDouble(info.get(2)));
+			form.setCourse_location(info.get(3));
 
 			try {
-				studentDao.update(form);
+				courseDao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -101,7 +91,7 @@ public class StudentServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/studentEntity/studentEntity_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/courseEntity/courseEntity_read_output.jsp").forward(request, response);
 		}
 	}
 }

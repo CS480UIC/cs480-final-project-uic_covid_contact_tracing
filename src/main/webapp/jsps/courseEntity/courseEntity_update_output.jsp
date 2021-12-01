@@ -21,32 +21,27 @@
   </head>
   
   <body>
-  <h1>Update Entity</h1>
+  <h1>Update Course</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	UIN    :<input type="text" name="uin1" value="${covidTestingEntity.uin }" disabled/>
+	UIN    :<input type="text" name="uin" value="${course.uin }" disabled/>
 	<br/>
 	
-	Test Date：<input type="text" name="test_date1" value="${covidTestingEntity.test_date1 }" disabled />
+	Course ID：<input type="text" name="course_id" value="${course.course_id }" disabled />
 	<br/>
-	Result Date	：<input type="text" name="result_date1" value="${covidTestingEntity.result_date1 }" disabled/>
-	<br/>
-	Test Result	：<input type="text" name="test_result1" value="${covidTestingEntity.test_result1 }" disabled/>
+	Course Location：<input type="text" name="course_location" value="${course.course_location }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/covidTestingEntityUpdate'/>" method="post">
+<form action="<c:url value='/CourseServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${covidTestingEntity.username }"/>
-	Test Result：<input type="text" name="test_result" value="${form.test_result }"/>
-	<span style="color: red; font-weight: 900">${errors.test_result }</span>
+		<input type="hidden" name="uin" value="${course.uin }"/>
+	
+	Course ID：<input type="text" name="course_id" value="${course.course_id }" />
 	<br/>
-	<!--   
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/> 
-	-->
-	<input type="submit" value="Update covidTestingEntity"/>
+	Course Location：<input type="text" name="course_location" value="${course.course_location }"/>
+	<br/>
+	<input type="submit" value="Update Course"/>
 </form>
 
 </body>

@@ -22,12 +22,12 @@
   
   <body>
   <h1>Delete courseEntity</h1>
-<form action="<c:url value='/covidTestingEntityServletDelete'/>" method="post">
+<form action="<c:url value='/CourseServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete UIN   :<input type="text" name="uin" value="${form.uin }"/>
 	<span style="color: red; font-weight: 900">${errors.uin }</span>
 	<br/>
-	<input type="submit" value="Delete studentHousingEntity"/>
+	<input type="submit" value="Delete Course"/>
 </form>
   </body>
 </html>

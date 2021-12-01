@@ -1,15 +1,15 @@
-package student.service;
+package course.service;
 
 
-import student.dao.CourseDao;
-import student.domain.Course;
+import course.dao.CourseDao;
+import course.domain.Course;
 
 /**
  * logic functions such as register, login
  * @author Sean Kim
  *
  */
-public class StudentService {
+public class CourseService {
 	private CourseDao studentDao = new CourseDao();
 	
 	/**
@@ -19,10 +19,10 @@ public class StudentService {
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
-	public void create(Course form) throws StudentException, ClassNotFoundException, InstantiationException, IllegalAccessException{
+	public void create(Course form) throws CourseException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
 		Course student = studentDao.findByUIN(form.getUin());
-		if(student.getUin()!=null && ((student.getUin()).equals(form.getUin()))) throw new StudentException("This UIN has been registered!");
+		if(student.getUin()!=null && ((student.getUin()).equals(form.getUin()))) throw new CourseException("This UIN has been registered!");
 		studentDao.add(form);
 	}
 }

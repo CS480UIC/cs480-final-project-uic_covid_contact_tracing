@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete studentHousingEntity</title>
+    <title>Delete Course</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,21 +21,19 @@
   </head>
   
   <body>
-  <h1>Delete studentHousingEntity</h1>
+  <h1>Delete Course</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/covidTestingEntityServletDelete'/>" method="post">
+<form action="<c:url value='/CourseServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${covidTestingEntity.uin }"/>
-	UIN    :<input type="text" name="username" value="${covidTestingEntity.uin }" disabled/>
+		<input type="hidden" name="uin" value="${course.uin }"/>
+	UIN    :<input type="text" name="uin" value="${course.uin }" disabled/>
 	<br/>
 	
-	Test Date：<input type="text" name="test_date" value="${covidTestingEntity.test_date }" disabled/>
+	Course ID：<input type="text" name="course_id" value="${course.course_id }" disabled />
 	<br/>
-	Result Date	：<input type="text" name="result_date" value="${covidTestingEntity.result_date }" disabled/>
+	Course Location：<input type="text" name="course_location" value="${course.course_location }" disabled/>
 	<br/>
-	Test Result	：<input type="text" name="test_result" value="${covidTestingEntity.test_result }" disabled/>
-	<br/>
-	<input type="submit" value="Delete covidTestingEntity"/>
+	<input type="submit" value="Delete Course"/>
 </form>
 
 </body>

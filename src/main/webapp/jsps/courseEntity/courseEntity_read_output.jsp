@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Course</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,16 +21,14 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read Course</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	UIN    :<input type="text" name="uin" value="${covidTestingEntity.uin }" disabled/>
+	UIN    :<input type="text" name="uin" value="${course.uin }" disabled/>
 	<br/>
-	Test Date：<input type="text" name="test_date" value="${covidTestingEntity.test_date }" disabled/>
+	Course ID：<input type="text" name="course_id" value="${course.course_id }" disabled />
 	<br/>
-	Result Date	：<input type="text" name="result_date" value="${covidTestingEntity.result_date }" disabled/>
-	<br/>
-	Test Result	：<input type="text" name="test_result" value="${covidTestingEntity.test_result }" disabled/>
+	Course Location：<input type="text" name="course_location" value="${course.course_location }" disabled/>
 	<br/>
 </form>
 
