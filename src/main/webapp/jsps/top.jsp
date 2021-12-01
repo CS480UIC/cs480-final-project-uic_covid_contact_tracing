@@ -49,10 +49,7 @@
 			-->
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
 			<br>
-			<a href="<c:url value='/jsps/studentEntity/studentEntitycreate.jsp'/>" target="body">Create Student</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/studentEntity/studentEntityread.jsp'/>" target="body">Read Student</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/studentEntity/studentEntityupdate.jsp'/>" target="body">Update Student</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/studentEntity/studentEntitydelete.jsp'/>" target="body">Delete Student</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/studentEntity/menu.jsp'/>" target="body">CRUD operations for studentEntity</a> |&nbsp;&nbsp;
 			<br>
 			<a href="<c:url value='/jsps/employeeEntity/employeeEntitycreate.jsp'/>" target="body">Create Employee</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/employeeEntity/employeeEntityread.jsp'/>" target="body">Read Employee</a> |&nbsp;&nbsp;

@@ -22,7 +22,7 @@
   </head>
   
   <body>
-    <h1>CRUD operations for studentEntity </h1>
+    <h1>CRUD operations for studentEntity</h1>
     <br>
 	<a href="<c:url value='/jsps/studentEntity/studentEntitycreate.jsp'/>" target="_parent">Create studentEntity</a> |&nbsp; 
 	<a href="<c:url value='/jsps/studentEntity/studentEntityread.jsp'/>" target="_parent">Read studentEntity</a> |&nbsp;
