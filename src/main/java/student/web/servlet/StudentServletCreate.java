@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import student.domain.Entity1;
-import student.service.Entity1Exception;
-import student.service.Entity1Service;
+import student.domain.Student;
+import student.service.StudentException;
+import student.service.StudentService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletCreate extends HttpServlet {
+public class StudentServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletCreate() {
+    public StudentServletCreate() {
         super();
     }
 
@@ -41,9 +41,9 @@ public class Entity1ServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1Service entity1service = new Entity1Service();
+		StudentService entity1service = new StudentService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Entity1 form = new Entity1();
+		Student form = new Student();
 		List<String> info = new ArrayList<String>();
 
 		for(String name : paramMap.keySet()) {
@@ -58,7 +58,7 @@ public class Entity1ServletCreate extends HttpServlet {
 			entity1service.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | Entity1Exception e) {
+		} catch (ClassNotFoundException | StudentException e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
 			e.printStackTrace();

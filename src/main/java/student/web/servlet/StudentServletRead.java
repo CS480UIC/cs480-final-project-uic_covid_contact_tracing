@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import student.dao.Entity1Dao;
-import student.domain.Entity1;
+import student.dao.StudentDao;
+import student.domain.Student;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletRead extends HttpServlet {
+public class StudentServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletRead() {
+    public StudentServletRead() {
         super();
     }
     
@@ -37,8 +37,8 @@ public class Entity1ServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1 entity1 = null;
-		Entity1Dao entity1Dao = new Entity1Dao();
+		Student entity1 = null;
+		StudentDao entity1Dao = new StudentDao();
 		
 		try {
 			entity1 = entity1Dao.findByUsername(request.getParameter("username"));

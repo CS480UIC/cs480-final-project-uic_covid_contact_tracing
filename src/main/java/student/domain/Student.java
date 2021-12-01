@@ -3,10 +3,10 @@ package student.domain;
 /**
  * User object
  * 
- * @author Aayush Makharia
+ * @author Sean Kim
  * 
  */
-public class Entity1 {
+public class Student {
 	/*
 	 * Correspond to the user table
 	 */
