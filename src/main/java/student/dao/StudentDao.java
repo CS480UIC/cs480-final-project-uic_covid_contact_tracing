@@ -22,40 +22,44 @@ public class StudentDao {
 	/**
 	 * user name to connect to the database 
 	 */
-	private String MySQL_user = "uic_covid_contract_tracing"; //TODO change user
+	private String MySQL_user = "uic_covid_contact_tracing"; //TODO change user
 	
 	/**
 	 * password of your username to connect to the database
 	 */
 	private String MySQL_password = "covid"; //TODO change password
 
-	public Student findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Student entity1 = new Student();
+	public Student findByUIN(Integer uin_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Student student = new Student();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
-		    String sql = "select * from entity1 where username=?";
+		    String sql = "SELECT * FROM student where student.uin=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1,uin_p);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("username");
-		    	if(user_name.equals(username)){
-		    		entity1.setUsername(resultSet.getString("username"));
-		    		entity1.setPassword(resultSet.getString("password"));
-		    		entity1.setEmail(resultSet.getString("email"));		
+		    	Integer uin = Integer.parseInt(resultSet.getString("uin"));
+		    	if(uin == uin_p){
+		    		student.setUin(uin);
+		    		student.setVaccination_status(Byte.parseByte(resultSet.getString("vaccination_status")));
+		    		student.setFirst_name(resultSet.getString("first_name"));
+		    		student.setLast_name(resultSet.getString("last_name"));
+		    		student.setStudent_living(Byte.parseByte(resultSet.getString("student_living_status")));
+		    		student.setStudent_major_name(resultSet.getString("student_major_name"));
+		    		student.setDorm_id(resultSet.getString("dorm_id"));
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return entity1;
+		return student;
 	}	
 	
 	/**
-	 * insert Entity1
+	 * insert Student
 	 * @param form
 	 * @throws ClassNotFoundException 
 	 * @throws IllegalAccessException 
@@ -67,11 +71,16 @@ public class StudentDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
 			
-			String sql = "insert into entity1 values(?,?,?)";
+			String sql = "insert into student (uin, vaccination_status, first_name, last_name, student_living_status, student_major_name, dorm_id) values(?,?,?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUsername());
-		    preparestatement.setString(2,form.getPassword());
-		    preparestatement.setString(3,form.getEmail());
+		    preparestatement.setInt(1,form.getUin());
+		    preparestatement.setByte(2, form.getVaccination_status());
+		    preparestatement.setString(3,form.getFirst_name());
+		    preparestatement.setString(4,form.getLast_name());
+	    	preparestatement.setByte(5,form.getStudent_living());
+	    	preparestatement.setString(6, form.getStudent_major_name());
+	    	preparestatement.setString(7, form.getDorm_id());
+		    
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -86,6 +95,7 @@ public class StudentDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
+	/*
 	public void update(Student form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -93,7 +103,7 @@ public class StudentDao {
 			
 			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
+		    preparestatement.setString(1,form.getUin());
 			preparestatement.setString(2,form.getEmail());
 		    preparestatement.setString(3,form.getUsername());
 		    preparestatement.executeUpdate();
@@ -102,6 +112,7 @@ public class StudentDao {
 			throw new RuntimeException(e);
 		}
 	}
+	*/
 	
 	
 	/**
@@ -110,6 +121,7 @@ public class StudentDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
+	/*
 	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -124,4 +136,5 @@ public class StudentDao {
 			throw new RuntimeException(e);
 		}
 	}
+	*/
 }

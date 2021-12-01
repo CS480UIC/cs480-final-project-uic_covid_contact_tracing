@@ -35,45 +35,45 @@ public class StudentServletDelete extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String method = request.getParameter("method");
-		StudentDao entity1Dao = new StudentDao();
-		Student entity1 = null;
-		if(method.equals("search"))
-		{
-			try {
-				entity1 = entity1Dao.findByUsername(request.getParameter("username"));
-			} catch (ClassNotFoundException e1) {
-				e1.printStackTrace();
-			} catch (InstantiationException e1) {
-				e1.printStackTrace();
-			} catch (IllegalAccessException e1) {
-				e1.printStackTrace();
-			}
-		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
-				}
-				else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-			}
-		}
-		else if(method.equals("delete"))
-		{	
-			try {
-				entity1Dao.delete(request.getParameter("username"));
-			} catch (ClassNotFoundException e1) {
-				e1.printStackTrace();
-			} catch (InstantiationException e1) {
-				e1.printStackTrace();
-			} catch (IllegalAccessException e1) {
-				e1.printStackTrace();
-			}
-			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-		}
+//		String method = request.getParameter("method");
+//		StudentDao entity1Dao = new StudentDao();
+//		Student entity1 = null;
+//		if(method.equals("search"))
+//		{
+//			try {
+//				entity1 = entity1Dao.findByUIN(request.getParameter("username"));
+//			} catch (ClassNotFoundException e1) {
+//				e1.printStackTrace();
+//			} catch (InstantiationException e1) {
+//				e1.printStackTrace();
+//			} catch (IllegalAccessException e1) {
+//				e1.printStackTrace();
+//			}
+//		
+//			if(entity1.getUsername()!=null){
+//						System.out.println(entity1);
+//						request.setAttribute("entity1", entity1);
+//						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
+//				}
+//				else{
+//				request.setAttribute("msg", "Entity not found");
+//				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+//			}
+//		}
+//		else if(method.equals("delete"))
+//		{	
+//			try {
+//				entity1Dao.delete(request.getParameter("username"));
+//			} catch (ClassNotFoundException e1) {
+//				e1.printStackTrace();
+//			} catch (InstantiationException e1) {
+//				e1.printStackTrace();
+//			} catch (IllegalAccessException e1) {
+//				e1.printStackTrace();
+//			}
+//			request.setAttribute("msg", "Entity Deleted");
+//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+//		}
 	}
 }
 

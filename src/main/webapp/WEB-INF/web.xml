@@ -95,6 +95,17 @@
   </servlet-mapping>
   
   
+   <servlet>
+    <description></description>
+    <display-name>StudentServletCreate</display-name>
+    <servlet-name>StudentServletCreate</servlet-name>
+    <servlet-class>student.web.servlet.StudentServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentServletCreate</servlet-name>
+    <url-pattern>/StudentServletCreate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>findAll</display-name>

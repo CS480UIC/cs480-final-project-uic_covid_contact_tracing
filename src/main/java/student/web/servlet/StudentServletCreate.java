@@ -50,9 +50,19 @@ public class StudentServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUsername(info.get(0));
-		form.setPassword(info.get(1));
-		form.setEmail(info.get(2));		
+		form.setUin(Integer.parseInt(info.get(0)));
+		form.setVaccination_status(Byte.parseByte(info.get(1)));
+		form.setFirst_name(info.get(2));
+		form.setLast_name(info.get(3));
+		form.setStudent_major_name(info.get(4));
+		form.setDorm_id(info.get(5));
+		if(form.getDorm_id() != "NULL") {
+			Integer a = 1;
+			form.setStudent_living(a.byteValue());
+		} else {
+			Integer b = 0;
+			form.setStudent_living(b.byteValue());
+		}
 		
 		try {
 			entity1service.create(form);
