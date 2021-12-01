@@ -24,9 +24,9 @@
   <h1>Read contact_information</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Email Address    :<input type="text" name="email" value="${contactInformationEntity.email }" disabled/>
+	Email Address    :<input type="text" name="email" value="${contactInformationEntity.email_address }" disabled/>
 	<br/>
-	Phone Number    ：<input type="text" name="phoneNumber" value="${contactInformationEntity.phoneNumber }" disabled/>
+	Phone Number    ：<input type="text" name="phoneNumber" value="${contactInformationEntity.phone_number }" disabled/>
 	<br/>
 	Address 	：<input type="text" name="address" value="${contactInformationEntity.address }" disabled/>
 	<br/>

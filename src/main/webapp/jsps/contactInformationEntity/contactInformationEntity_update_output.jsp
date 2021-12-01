@@ -24,9 +24,9 @@
   <h1>Update contact_information</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Email Address    :<input type="text" name="email" value="${contactInformationEntity.email }" disabled/>
+	Email Address    :<input type="text" name="email" value="${contactInformationEntity.email_address }" disabled/>
 	<br/>
-	Phone Number    ：<input type="text" name="phoneNumber" value="${contactInformationEntity.phoneNumber }" disabled/>
+	Phone Number    ：<input type="text" name="phoneNumber" value="${contactInformationEntity.phone_number }" disabled/>
 	<br/>
 	Address 	：<input type="text" name="address" value="${contactInformationEntity.address }" disabled/>
 	<br/>
@@ -34,16 +34,16 @@
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/contactInformationEntityServletUpdate'/>" method="post">
-		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="uin" value="${contactInformationEntity.uin }"/>
-	Email Address    :<input type="text" name="email" value="${form.email }"/>
+<form action="<c:url value='/ContactInformationServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="update"/>
+	<input type="hidden" name="uin" value="${contactInformationEntity.uin }"/>
+	Email Address    :<input type="text" name="email" value="${contactInformationEntity.email_address }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	Phone Number    ：<input type="text" name="phoneNumber" value="${form.phoneNumber }"/>
+	Phone Number    ：<input type="text" name="phoneNumber" value="${contactInformationEntity.phone_number }"/>
 	<span style="color: red; font-weight: 900">${errors.phoneNumber }</span>
 	<br/>
-	Address	  ：<input type="text" name="address" value="${form.address }"/>
+	Address	  ：<input type="text" name="address" value="${contactInformationEntity.address }"/>
 	<span style="color: red; font-weight: 900">${errors.address }</span>
 	<br/>
 	<input type="submit" value="Update contactInformationEntity"/>

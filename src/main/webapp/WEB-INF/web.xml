@@ -141,6 +141,50 @@
   
   <servlet>
     <description></description>
+    <display-name>ContactInformationServletCreate</display-name>
+    <servlet-name>ContactInformationServletCreate</servlet-name>
+    <servlet-class>contact_information.web.servlet.ContactInformationServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactInformationServletCreate</servlet-name>
+    <url-pattern>/ContactInformationServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ContactInformationServletDelete</display-name>
+    <servlet-name>ContactInformationServletDelete</servlet-name>
+    <servlet-class>contact_information.web.servlet.ContactInformationServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactInformationServletDelete</servlet-name>
+    <url-pattern>/ContactInformationServletDelete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>ContactInformationServletRead</display-name>
+    <servlet-name>ContactInformationServletRead</servlet-name>
+    <servlet-class>contact_information.web.servlet.ContactInformationServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactInformationServletRead</servlet-name>
+    <url-pattern>/ContactInformationServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ContactInformationServletUpdate</display-name>
+    <servlet-name>ContactInformationServletUpdate</servlet-name>
+    <servlet-class>contact_information.web.servlet.ContactInformationServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactInformationServletUpdate</servlet-name>
+    <url-pattern>/ContactInformationServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>findAll</display-name>
     <servlet-name>findAll</servlet-name>
     

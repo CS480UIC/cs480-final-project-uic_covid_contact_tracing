@@ -22,7 +22,7 @@ public class StudentService {
 	public void create(Student form) throws StudentException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
 		Student student = studentDao.findByUIN(form.getUin());
-		if(student.getUin()!=null && (student.getUin() ==form.getUin())) throw new StudentException("This UIN has been registered!");
+		if(student.getUin()!=null && ((student.getUin()).equals(form.getUin()))) throw new StudentException("This UIN has been registered!");
 		studentDao.add(form);
 	}
 }

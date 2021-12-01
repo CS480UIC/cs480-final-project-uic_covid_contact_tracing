@@ -22,18 +22,18 @@
   
   <body>
   <h1>Create contact_information</h1>
-<form action="<c:url value='/contactInformationEntityServletCreate'/>" method="post">
-	Email Address    :<input type="text" name="email" value="${form.email }"/>
+<form action="<c:url value='/ContactInformationServletCreate'/>" method="post">
+	UIN	  ：<input type="text" name="uin" value="${form.uin }"/>
+	<span style="color: red; font-weight: 900">${errors.uin }</span>
+	<br/>
+	Email Address    :<input type="text" name="email_address" value="${form.email_address }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	Phone Number    ：<input type="text" name="phoneNumber" value="${form.phoneNumber }"/>
+	Phone Number    ：<input type="text" name="phone_number" value="${form.phone_number }"/>
 	<span style="color: red; font-weight: 900">${errors.phoneNumber }</span>
 	<br/>
 	Address	  ：<input type="text" name="address" value="${form.address }"/>
 	<span style="color: red; font-weight: 900">${errors.address }</span>
-	<br/>
-	UIN	  ：<input type="text" name="uin" value="${form.uin }"/>
-	<span style="color: red; font-weight: 900">${errors.uin }</span>
 	<br/>
 	<input type="submit" value="Create contactInformationEntity"/>
 </form>

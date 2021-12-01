@@ -23,12 +23,12 @@
   <body>
   <h1>Delete contact_information</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/contactInformationEntityServletDelete'/>" method="post">
+<form action="<c:url value='/ContactInformationServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="uin" value="${contactInformationEntity.uin }"/>
-	Email Address    :<input type="text" name="email" value="${contactInformationEntity.email }" disabled/>
+	<input type="hidden" name="uin" value="${contactInformationEntity.uin }"/>
+	Email Address    :<input type="text" name="email" value="${contactInformationEntity.email_address }" disabled/>
 	<br/>
-	Phone Number    ：<input type="text" name="phoneNumber" value="${contactInformationEntity.phoneNumber }" disabled/>
+	Phone Number    ：<input type="text" name="phoneNumber" value="${contactInformationEntity.phone_number }" disabled/>
 	<br/>
 	Address 	：<input type="text" name="address" value="${contactInformationEntity.address }" disabled/>
 	<br/>

@@ -21,10 +21,10 @@
   </head>
   
   <body>
-  <h1>Delete contact_information</h1>
-<form action="<c:url value='/contactInformationEntityServletDelete'/>" method="post">
+  <h1>Delete Contact Information</h1>
+<form action="<c:url value='/ContactInformationServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete uin   :<input type="text" name="uin" value="${form.uin }"/>
+	UIN   :<input type="text" name="uin" value="${form.uin }"/>
 	<span style="color: red; font-weight: 900">${errors.uin }</span>
 	<br/>
 	<input type="submit" value="Delete contact_information"/>
