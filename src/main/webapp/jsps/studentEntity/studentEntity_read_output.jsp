@@ -24,11 +24,17 @@
   <h1>Read Entity Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${studentEntity.username }" disabled/>
+	UIN    :<input type="text" name="uin" value="${student.uin }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${studentEntity.password }" disabled/>
+	Vaccination Status：<input type="text" name="vaccination_status" value="${student.vaccination_status }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${studentEntity.email }" disabled/>
+	First Name	：<input type="text" name="first_name" value="${student.first_name }" disabled/>
+	<br/>
+	Last Name	：<input type="text" name="last_name" value="${student.last_name }" disabled/>
+	<br/>
+	Major	：<input type="text" name="student_major_name" value="${student.student_major_name }" disabled/>
+	<br/>
+	Dorm	：<input type="text" name="dorm_id" value="${student.dorm_id }" disabled/>
 	<br/>
 </form>
 

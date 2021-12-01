@@ -23,7 +23,7 @@
   <body>
   <h1>Read studentEntity from UIN</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/StudentServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	UIN    :<input type="text" name="uin" value="${form.uin }"/>
 	<span style="color: red; font-weight: 900">${errors.uin }</span>

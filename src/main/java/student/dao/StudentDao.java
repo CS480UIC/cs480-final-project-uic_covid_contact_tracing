@@ -39,9 +39,14 @@ public class StudentDao {
 		    preparestatement.setInt(1,uin_p);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
+		    
 		    while(resultSet.next()){
 		    	Integer uin = Integer.parseInt(resultSet.getString("uin"));
-		    	if(uin == uin_p){
+		    	System.out.println(uin);
+		    	System.out.println(uin_p);
+		    	System.out.println(uin==uin_p);
+		    	System.out.println("1st is db, 2nd is ours");
+		    	if(uin.equals(uin_p)){
 		    		student.setUin(uin);
 		    		student.setVaccination_status(Byte.parseByte(resultSet.getString("vaccination_status")));
 		    		student.setFirst_name(resultSet.getString("first_name"));

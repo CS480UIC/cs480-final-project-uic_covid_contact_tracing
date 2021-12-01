@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jpc.org/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>CS480 Demo</display-name>
     <servlet>
     <description></description>
@@ -104,6 +104,17 @@
   <servlet-mapping>
     <servlet-name>StudentServletCreate</servlet-name>
     <url-pattern>/StudentServletCreate</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>StudentServletRead</display-name>
+    <servlet-name>StudentServletRead</servlet-name>
+    <servlet-class>student.web.servlet.StudentServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentServletRead</servlet-name>
+    <url-pattern>/StudentServletRead</url-pattern>
   </servlet-mapping>
   
   <servlet>

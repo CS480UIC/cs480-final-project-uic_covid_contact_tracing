@@ -37,28 +37,28 @@ public class StudentServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		Student entity1 = null;
-//		StudentDao entity1Dao = new StudentDao();
-//		
-//		try {
-//			entity1 = entity1Dao.findByUIN(request.getParameter("username"));
-//		} catch (ClassNotFoundException e1) {
-//			e1.printStackTrace();
-//		} catch (InstantiationException e1) {
-//			e1.printStackTrace();
-//		} catch (IllegalAccessException e1) {
-//			e1.printStackTrace();
-//		}
-//		
-//		if(entity1.getUsername()!=null){
-//					System.out.println(entity1);
-//					request.setAttribute("entity1", entity1);
-//					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//			}
-//			else{
-//			request.setAttribute("msg", "Entity not found");
-//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//		}
+		Student student = null;
+		StudentDao studentDao = new StudentDao();
+		
+		try {
+			student = studentDao.findByUIN(Integer.parseInt(request.getParameter("uin")));
+		} catch (ClassNotFoundException e1) {
+			e1.printStackTrace();
+		} catch (InstantiationException e1) {
+			e1.printStackTrace();
+		} catch (IllegalAccessException e1) {
+			e1.printStackTrace();
+		}
+		
+		if(!(student.getUin()).equals(null)){
+					System.out.println(student);
+					request.setAttribute("student", student);
+					request.getRequestDispatcher("/jsps/studentEntity/studentEntity_read_output.jsp").forward(request, response);
+			}
+			else{
+			request.setAttribute("msg", "Entity not found");
+			request.getRequestDispatcher("/jsps/studentEntity/studentEntity_read_output.jsp").forward(request, response);
+		}
 	}
 }
 
