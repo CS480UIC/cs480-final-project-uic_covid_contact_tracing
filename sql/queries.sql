@@ -5,7 +5,7 @@ FROM student
 WHERE vaccination_status != 2
 ORDER BY uin;
 
-CREATE VIEW covid_tests_not_positive
+CREATE VIEW covid_tests_not_negative
 AS
 SELECT * 
 FROM covid_test
@@ -28,14 +28,14 @@ GROUP BY test_result;
 -- find number of students per organization, filtering out orgs with 1 or fewer members
 CREATE VIEW num_members_per_org
 AS
-SELECT UPPER(organization_name), COUNT(*)
+SELECT UPPER(organization_name) AS organization_name, COUNT(*) AS count
 FROM organization
-GROUP BY organization_id HAVING COUNT(*) >= 2
+GROUP BY organization_id HAVING COUNT(*) >= 2;
 
 -- find number of covid tests taken in 2021
 CREATE VIEW num_covid_tests_2021
 AS
-SELECT COUNT(*)
+SELECT COUNT(*) AS count
 FROM covid_test
 WHERE YEAR(test_date) = 2021;
 
@@ -43,7 +43,7 @@ WHERE YEAR(test_date) = 2021;
 
 CREATE VIEW uic_residents_vaccination_status
 AS
-SELECT vaccination_status, first_name, last_name, student.dorm_id, student_housing.room_number
+SELECT student.uin AS uin, vaccination_status, first_name, last_name, student.dorm_id AS dorm_id, student_housing.room_number AS room_number
 FROM student
 JOIN student_housing
 ON student.uin = student_housing.uin

@@ -16,7 +16,8 @@ public class Course {
 	private String first_name;
 	private String last_name;
 	private Byte student_living;
-	
+	private Integer room_number;
+
 	/**
 	 * @return the uin
 	 */
@@ -100,6 +101,12 @@ public class Course {
 	 */
 	public void setDorm_id(String dorm_id) {
 		this.dorm_id = dorm_id;
+	}
+	public Integer getRoom_number() {
+		return room_number;
+	}
+	public void setRoom_number(Integer room_number) {
+		this.room_number = room_number;
 	}
 	private String student_major_name;
 	private String dorm_id;

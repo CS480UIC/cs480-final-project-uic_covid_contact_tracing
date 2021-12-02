@@ -52,7 +52,7 @@ public class StudentHousingServletCreate extends HttpServlet {
 		}
 		form.setUin(Integer.parseInt(info.get(3)));
 		form.setDorm_id(info.get(1));
-		form.setRoom_number(Byte.parseByte(info.get(2)));
+		form.setRoom_number(Integer.parseInt(info.get(2)));
 		
 		try {
 			entity1service.create(form);

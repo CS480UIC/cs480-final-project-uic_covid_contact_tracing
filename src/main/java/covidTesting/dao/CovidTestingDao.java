@@ -5,9 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -131,5 +130,69 @@ public class CovidTestingDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public List<Object> findNonNegativeTests() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
+			String sql = "select * from covid_tests_not_negative";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				CovidTesting covidTest = new CovidTesting();
+				covidTest.setUin(resultSet.getInt("uin"));
+				covidTest.setTest_date(resultSet.getDate("test_date"));
+				covidTest.setResult_date(resultSet.getDate("result_date"));
+				covidTest.setTest_result(resultSet.getByte("test_result"));
+	    		list.add(covidTest);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+	}
+
+	public List<Object> findTestResultPercentages() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
+			String sql = "select * from test_result_percentages";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				CovidTesting covidTest = new CovidTesting();
+				covidTest.setTest_result(resultSet.getByte("test_result"));
+				covidTest.setPercentage(resultSet.getDouble("percentage"));
+	    		list.add(covidTest);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+	}
+	
+	public List<Object> findNumTests2021() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
+			String sql = "select * from num_covid_tests_2021";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				CovidTesting covidTest = new CovidTesting();
+				covidTest.setCount(resultSet.getInt("count"));
+	    		list.add(covidTest);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 	}
 }

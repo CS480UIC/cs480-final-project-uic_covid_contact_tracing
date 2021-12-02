@@ -370,6 +370,117 @@
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>unvaccinatedStudents</display-name>
+    <servlet-name>unvaccinatedStudents</servlet-name>
+    
+    <servlet-class>student.web.servlet.unvaccinatedStudents</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>unvaccinatedStudents</servlet-name>
+    <url-pattern>/unvaccinatedStudents</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description></description>
+    <display-name>nonNegativeTests</display-name>
+    <servlet-name>nonNegativeTests</servlet-name>
+    
+    <servlet-class>covidTesting.web.servlet.nonNegativeTests</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>nonNegativeTests</servlet-name>
+    <url-pattern>/nonNegativeTests</url-pattern>
+  </servlet-mapping>
+  
+       <servlet>
+    <description></description>
+    <display-name>arcResidents</display-name>
+    <servlet-name>arcResidents</servlet-name>
+    
+    <servlet-class>student_housing.web.servlet.arcResidents</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>arcResidents</servlet-name>
+    <url-pattern>/arcResidents</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>testResultPercentages</display-name>
+    <servlet-name>testResultPercentages</servlet-name>
+    
+    <servlet-class>covidTesting.web.servlet.testResultPercentages</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>testResultPercentages</servlet-name>
+    <url-pattern>/testResultPercentages</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>numMembersPerOrg</display-name>
+    <servlet-name>numMembersPerOrg</servlet-name>
+    
+    <servlet-class>organization.web.servlet.numMembersPerOrg</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>numMembersPerOrg</servlet-name>
+    <url-pattern>/numMembersPerOrg</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description></description>
+    <display-name>numTests2021</display-name>
+    <servlet-name>numTests2021</servlet-name>
+    
+    <servlet-class>covidTesting.web.servlet.numTests2021</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>numTests2021</servlet-name>
+    <url-pattern>/numTests2021</url-pattern>
+  </servlet-mapping>
+  
+       <servlet>
+    <description></description>
+    <display-name>vaxStatusResidents</display-name>
+    <servlet-name>vaxStatusResidents</servlet-name>
+    
+    <servlet-class>student.web.servlet.vaxStatusResidents</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>vaxStatusResidents</servlet-name>
+    <url-pattern>/vaxStatusResidents</url-pattern>
+  </servlet-mapping>
+  
+         <servlet>
+    <description></description>
+    <display-name>studentsInOrgs</display-name>
+    <servlet-name>studentsInOrgs</servlet-name>
+    
+    <servlet-class>organization.web.servlet.studentsInOrgs</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>studentsInOrgs</servlet-name>
+    <url-pattern>/studentsInOrgs</url-pattern>
+  </servlet-mapping>
+  
+           <servlet>
+    <description></description>
+    <display-name>unvaxxedStudentsInOrgs</display-name>
+    <servlet-name>unvaxxedStudentsInOrgs</servlet-name>
+    
+    <servlet-class>organization.web.servlet.unvaxxedStudentsInOrgs</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>unvaxxedStudentsInOrgs</servlet-name>
+    <url-pattern>/unvaxxedStudentsInOrgs</url-pattern>
+  </servlet-mapping>
+
+  
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>

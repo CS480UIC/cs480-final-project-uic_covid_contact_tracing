@@ -52,7 +52,7 @@ public class OrganizationServletCreate extends HttpServlet {
 		}
 		form.setUin(Integer.parseInt(info.get(0)));
 		form.setOrganization_name(info.get(2));
-		form.setOrganization_id(Double.parseDouble(info.get(1)));
+		form.setOrganization_id(Integer.parseInt(info.get(1)));
 		
 		try {
 			entity1service.create(form);

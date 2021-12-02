@@ -1,6 +1,8 @@
 package organization.service;
 
 
+import java.util.List;
+
 import organization.dao.OrganizationDao;
 import organization.domain.Organization;
 
@@ -24,5 +26,17 @@ public class OrganizationService {
 		Organization organization = organizationDao.findByUIN(form.getUin());
 		if(organization.getUin()!=null && ((organization.getUin()).equals(form.getUin()))) throw new OrganizationException("This UIN has been registered!");
 		organizationDao.add(form);
+	}
+
+	public List<Object> findNumMembersPerOrg() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return organizationDao.findNumMembersPerOrg();
+	}
+
+	public Object findStudentsInOrgs() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return organizationDao.findStudentsInOrgs();
+	}
+	
+	public List<Object> findUnvaxxedStudentsInOrgs() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return organizationDao.findUnvaxxedStudentsInOrgs();
 	}
 }

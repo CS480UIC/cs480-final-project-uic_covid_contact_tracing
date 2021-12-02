@@ -17,6 +17,8 @@ public class CovidTesting {
 	private Date test_date;
 	private Date result_date;
 	private Byte test_result;
+	private Double percentage;
+	private Integer count;
 
 	/**
 	 * @return the uin
@@ -65,6 +67,20 @@ public class CovidTesting {
 	 */
 	public void setTest_result(Byte result) {
 		this.test_result = result;
+	}
+	
+	public Double getPercentage() {
+		return percentage;
+	}
+	
+	public void setPercentage(Double percentage) {
+		this.percentage = percentage;
+	}
+	public Integer getCount() {
+		return count;
+	}
+	public void setCount(Integer count) {
+		this.count = count;
 	}
 
 }

@@ -39,16 +39,16 @@ public class StudentHousing {
 	/**
 	 * @return the room_number
 	 */
-	public Byte getRoom_number() {
+	public Integer getRoom_number() {
 		return room_number;
 	}
 	/**
 	 * @param room_number the room_number to set
 	 */
-	public void setRoom_number(Byte room_number) {
+	public void setRoom_number(Integer room_number) {
 		this.room_number = room_number;
 	}
 	private String dorm_id;
-	private Byte room_number;
+	private Integer room_number;
 
 }

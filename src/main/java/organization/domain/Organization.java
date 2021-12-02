@@ -12,8 +12,9 @@ public class Organization {
 	 */
 	
 	private Integer uin;
-	private Double organization_id;
+	private Integer organization_id;
 	private String organization_name;
+	private Integer count;
 	/**
 	 * @return the uin
 	 */
@@ -29,13 +30,13 @@ public class Organization {
 	/**
 	 * @return the organization_id
 	 */
-	public Double getOrganization_id() {
+	public Integer getOrganization_id() {
 		return organization_id;
 	}
 	/**
 	 * @param organization_id the organization_id to set
 	 */
-	public void setOrganization_id(Double organization_id) {
+	public void setOrganization_id(Integer organization_id) {
 		this.organization_id = organization_id;
 	}
 	/**
@@ -49,6 +50,12 @@ public class Organization {
 	 */
 	public void setOrganization_name(String organization_name) {
 		this.organization_name = organization_name;
+	}
+	public Integer getCount() {
+		return count;
+	}
+	public void setCount(Integer count) {
+		this.count = count;
 	}
 
 }

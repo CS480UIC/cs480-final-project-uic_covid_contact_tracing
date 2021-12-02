@@ -5,9 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-
-
+import covidTesting.domain.CovidTesting;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -44,7 +45,7 @@ public class OrganizationDao {
 		    	Integer uin = Integer.parseInt(resultSet.getString("uin"));
 		    	if(uin.equals(uin_p)){
 		    		organization.setUin(uin);
-		    		organization.setOrganization_id(Double.parseDouble(resultSet.getString("organization_id")));
+		    		organization.setOrganization_id(Integer.parseInt(resultSet.getString("organization_id")));
 		    		organization.setOrganization_name(resultSet.getString("organization_name"));
 		    	}
 		    }
@@ -128,5 +129,70 @@ public class OrganizationDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public List<Object> findNumMembersPerOrg() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
+			String sql = "select * from num_members_per_org";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Organization organization = new Organization();
+				organization.setOrganization_name(resultSet.getString("organization_name"));
+				organization.setCount(resultSet.getInt("count"));
+	    		list.add(organization);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+	}
+
+	public Object findStudentsInOrgs() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
+			String sql = "select * from large_organizations";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Organization organization = new Organization();
+				organization.setUin(resultSet.getInt("uin"));
+				organization.setOrganization_name(resultSet.getString("organization_name"));
+				organization.setOrganization_id(resultSet.getInt("organization_id"));
+	    		list.add(organization);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+	}
+
+	public List<Object> findUnvaxxedStudentsInOrgs() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
+			String sql = "select * from unvaccinated_students_in_orgs";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Organization organization = new Organization();
+				organization.setUin(resultSet.getInt("uin"));
+				organization.setOrganization_name(resultSet.getString("organization_name"));
+				organization.setOrganization_id(resultSet.getInt("organization_id"));
+	    		list.add(organization);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 	}
 }

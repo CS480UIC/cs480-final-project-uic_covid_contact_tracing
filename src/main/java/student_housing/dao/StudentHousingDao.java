@@ -5,9 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-
-
+import covidTesting.domain.CovidTesting;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -45,7 +46,7 @@ public class StudentHousingDao {
 		    	if(uin.equals(uin_p)){
 		    		student.setUin(uin);
 		    		student.setDorm_id(resultSet.getString("dorm_id"));
-		    		student.setRoom_number(Byte.parseByte(resultSet.getString("room_number")));
+		    		student.setRoom_number(Integer.parseInt(resultSet.getString("room_number")));
 		    	}
 		    }
 		    connect.close();
@@ -72,7 +73,7 @@ public class StudentHousingDao {
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getUin());
 		    preparestatement.setString(2, form.getDorm_id());
-		    preparestatement.setByte(3,form.getRoom_number());
+		    preparestatement.setInt(3,form.getRoom_number());
 		    
 		    preparestatement.executeUpdate();
 		    connect.close();
@@ -96,7 +97,7 @@ public class StudentHousingDao {
 			String sql = "UPDATE student_housing SET dorm_id = ?, room_number = ? where uin = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1, form.getDorm_id());
-		    preparestatement.setByte(2,form.getRoom_number());
+		    preparestatement.setInt(2,form.getRoom_number());
 	    	preparestatement.setInt(3, form.getUin());
 		    
 		    preparestatement.executeUpdate();
@@ -128,5 +129,28 @@ public class StudentHousingDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	
+	public List<Object> findArcResidents() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
+			String sql = "select * from arc_residents";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				StudentHousing housing = new StudentHousing();
+				housing.setUin(resultSet.getInt("uin"));
+				housing.setDorm_id(resultSet.getString("dorm_id"));
+				housing.setRoom_number(resultSet.getInt("room_number"));
+	    		list.add(housing);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 	}
 }

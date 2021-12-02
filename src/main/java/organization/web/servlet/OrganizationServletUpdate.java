@@ -77,7 +77,7 @@ public class OrganizationServletUpdate extends HttpServlet {
 				info.add(values[0]);
 			}
 			form.setUin(Integer.parseInt(info.get(1)));
-			form.setOrganization_id(Double.parseDouble(info.get(2)));
+			form.setOrganization_id(Integer.parseInt(info.get(2)));
 			form.setOrganization_name(info.get(3));
 
 			try {

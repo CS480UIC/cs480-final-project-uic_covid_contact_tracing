@@ -78,7 +78,7 @@ public class StudentHousingServletUpdate extends HttpServlet {
 			}
 			form.setUin(Integer.parseInt(info.get(1)));
 			form.setDorm_id(info.get(2));
-			form.setRoom_number(Byte.parseByte(info.get(3)));
+			form.setRoom_number(Integer.parseInt(info.get(3)));
 
 			try {
 				courseDao.update(form);

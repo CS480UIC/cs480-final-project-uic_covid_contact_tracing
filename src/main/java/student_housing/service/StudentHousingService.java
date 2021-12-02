@@ -1,6 +1,8 @@
 package student_housing.service;
 
 
+import java.util.List;
+
 import student_housing.dao.StudentHousingDao;
 import student_housing.domain.StudentHousing;
 
@@ -24,5 +26,9 @@ public class StudentHousingService {
 		StudentHousing student = studentDao.findByUIN(form.getUin());
 		if(student.getUin()!=null && ((student.getUin()).equals(form.getUin()))) throw new StudentHousingException("This UIN has been registered!");
 		studentDao.add(form);
+	}
+	
+	public List<Object> findArcResidents() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return studentDao.findArcResidents();
 	}
 }

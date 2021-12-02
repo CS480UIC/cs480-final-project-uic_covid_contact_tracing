@@ -5,14 +5,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import student.domain.Course;
+import user.domain.User;
 
 /**
  * DDL functions performed in database
@@ -144,5 +144,56 @@ public class CourseDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public List<Object> findUnvaxxed() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
+			String sql = "select * from unvaccinated_students";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Course student = new Course();
+				student.setUin(resultSet.getInt("uin"));
+				student.setVaccination_status(resultSet.getByte("vaccination_status"));
+				student.setFirst_name(resultSet.getString("first_name"));
+				student.setLast_name(resultSet.getString("last_name"));
+				student.setStudent_living(resultSet.getByte("student_living_status"));
+				student.setStudent_major_name(resultSet.getString("student_major_name"));
+				student.setDorm_id(resultSet.getString("dorm_id"));
+	    		list.add(student);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+	}
+
+	public List<Object> findVaxStatusResidents() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
+			String sql = "select * from uic_residents_vaccination_status";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Course student = new Course();
+				student.setUin(resultSet.getInt("uin"));
+				student.setVaccination_status(resultSet.getByte("vaccination_status"));
+				student.setFirst_name(resultSet.getString("first_name"));
+				student.setLast_name(resultSet.getString("last_name"));
+				student.setDorm_id(resultSet.getString("dorm_id"));
+				student.setRoom_number(resultSet.getInt("room_number"));
+	    		list.add(student);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 	}
 }
