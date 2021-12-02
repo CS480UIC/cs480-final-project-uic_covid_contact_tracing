@@ -1,4 +1,4 @@
-CREATE DATABASE uic_covid_contact_tracing;
+-- CREATE DATABASE uic_covid_contact_tracing;
 USE uic_covid_contact_tracing;
 
 CREATE TABLE student (
@@ -61,15 +61,4 @@ CREATE TABLE contact_information (
     FOREIGN KEY (uin) REFERENCES student(uin)
 		ON UPDATE CASCADE
         ON DELETE CASCADE
-);
-
-CREATE TABLE user (
-	username VARCHAR(50),
-	password VARCHAR(50),
-	email VARCHAR(50)
-);
-CREATE TABLE entity1 (
-	username VARCHAR(50),
-	password VARCHAR(50),
-	email VARCHAR(50)
 );
