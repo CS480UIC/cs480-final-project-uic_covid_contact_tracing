@@ -50,7 +50,7 @@
 			<!-- <br> -->
 			<a href="<c:url value='/jsps/studentEntity/menu.jsp'/>" target="body">CRUD operations for Students</a> |&nbsp;&nbsp;
 			<!-- <br> -->
-			<a href="<c:url value='/jsps/employeeEntity/menu.jsp'/>" target="body">CRUD operations for Employees</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/organizationEntity/menu.jsp'/>" target="body">CRUD operations for Organizations</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/courseEntity/menu.jsp'/>" target="body">CRUD operations for Courses</a> |&nbsp;&nbsp;
 			<br>
 			<a href="<c:url value='/jsps/contactInformationEntity/menu.jsp'/>" target="body">CRUD operations for Contact Information</a> |&nbsp;&nbsp;
