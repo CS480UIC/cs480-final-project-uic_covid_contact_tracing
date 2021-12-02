@@ -24,7 +24,7 @@
   <body>
     <h1>CRUD operations for Student Housing</h1>
     <br>
-	<a href="<c:url value='/jsps/studentHousingEntity/studentHousingEntitycreate.jsp'/>" target="_parent">Create studentHousingEntity</a> |&nbsp; 
+	<a href="<c:url value='/jsps/studentHousingEntity/studentHousingcreate.jsp'/>" target="_parent">Create studentHousingEntity</a> |&nbsp; 
 	<a href="<c:url value='/jsps/studentHousingEntity/studentHousingEntityread.jsp'/>" target="_parent">Read studentHousingEntity</a> |&nbsp;
 	<a href="<c:url value='/jsps/studentHousingEntity/studentHousingEntityupdate.jsp'/>" target="_parent">Update studentHousingEntity</a> |&nbsp;	 
 	<a href="<c:url value='/jsps/studentHousingEntity/studentHousingEntitydelete.jsp'/>" target="_parent">Delete studentHousingEntity</a>	

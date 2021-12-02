@@ -50,9 +50,9 @@ public class CourseServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUin(Integer.parseInt(info.get(1)));
-		form.setCourse_id(Double.parseDouble(info.get(2)));
-		form.setCourse_location(info.get(3));
+		form.setUin(Integer.parseInt(info.get(3)));
+		form.setCourse_location(info.get(2));
+		form.setCourse_id(Double.parseDouble(info.get(1)));
 		
 		try {
 			entity1service.create(form);

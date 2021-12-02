@@ -23,16 +23,14 @@
   <body>
   <h1>courseEntity Create</h1>
 <form action="<c:url value='/CourseServletCreate'/>" method="post">
-	UIN	：<input type="text" name="uin" value="${form.uin }"/>
-	<span style="color: red; font-weight: 900">${errors.uin }</span>
 	course_id    :<input type="text" name="course_id" value="${form.course_id }"/>
 	<span style="color: red; font-weight: 900">${errors.course_id }</span>
 	<br/>
 	course_location：<input type="text" name="course_location" value="${form.course_location }"/>
 	<span style="color: red; font-weight: 900">${errors.course_location }</span>
 	<br/>
-	
-	
+	UIN	：<input type="text" name="uin" value="${form.uin }"/>
+	<span style="color: red; font-weight: 900">${errors.uin }</span>
 	<br/>
 	<input type="submit" value="Create courseEntity"/>
 </form>

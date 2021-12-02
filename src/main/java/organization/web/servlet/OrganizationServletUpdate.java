@@ -76,7 +76,6 @@ public class OrganizationServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			System.out.println(info.get(1));
 			form.setUin(Integer.parseInt(info.get(1)));
 			form.setOrganization_id(Integer.parseInt(info.get(2)));
 			form.setOrganization_name(info.get(3));
