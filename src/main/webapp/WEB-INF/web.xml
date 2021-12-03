@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jpc.org/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>CS480 Demo</display-name>
+    <servlet>
+    <description></description>
+    <display-name>Entity1ServletCreate</display-name>
+    <servlet-name>Entity1ServletCreate</servlet-name>
+    <servlet-class>entity1.web.servlet.Entity1ServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Entity1ServletCreate</servlet-name>
+    <url-pattern>/Entity1ServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Entity1ServletRead</display-name>
+    <servlet-name>Entity1ServletRead</servlet-name>
+    <servlet-class>entity1.web.servlet.Entity1ServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Entity1ServletRead</servlet-name>
+    <url-pattern>/Entity1ServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>Entity1ServletUpdate</display-name>
+    <servlet-name>Entity1ServletUpdate</servlet-name>
+    <servlet-class>entity1.web.servlet.Entity1ServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Entity1ServletUpdate</servlet-name>
+    <url-pattern>/Entity1ServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>Entity1ServletDelete</display-name>
+    <servlet-name>Entity1ServletDelete</servlet-name>
+    <servlet-class>entity1.web.servlet.Entity1ServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Entity1ServletDelete</servlet-name>
+    <url-pattern>/Entity1ServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>UserServletRegister</display-name>
+    <servlet-name>UserServletRegister</servlet-name>
+    <servlet-class>user.web.servlet.UserServletRegister</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServletRegister</servlet-name>
+    <url-pattern>/UserServletRegister</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>InitializeDB</display-name>
+    <servlet-name>InitializeDB</servlet-name>
+    <servlet-class>init.web.servlet.InitializeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitializeDB</servlet-name>
+    <url-pattern>/InitializeDB</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>UserServletLogin</display-name>
+    <servlet-name>UserServletLogin</servlet-name>
+    <servlet-class>user.web.servlet.UserServletLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServletLogin</servlet-name>
+    <url-pattern>/UserServletLogin</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>UserServletLogout</display-name>
+    <servlet-name>UserServletLogout</servlet-name>
+    <servlet-class>user.web.servlet.UserServletLogout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServletLogout</servlet-name>
+    <url-pattern>/UserServletLogout</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <description></description>
+    <display-name>StudentServletCreate</display-name>
+    <servlet-name>StudentServletCreate</servlet-name>
+    <servlet-class>student.web.servlet.StudentServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentServletCreate</servlet-name>
+    <url-pattern>/StudentServletCreate</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>StudentServletRead</display-name>
+    <servlet-name>StudentServletRead</servlet-name>
+    <servlet-class>student.web.servlet.StudentServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentServletRead</servlet-name>
+    <url-pattern>/StudentServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>StudentServletDelete</display-name>
+    <servlet-name>StudentServletDelete</servlet-name>
+    <servlet-class>student.web.servlet.StudentServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentServletDelete</servlet-name>
+    <url-pattern>/StudentServletDelete</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>StudentServletUpdate</display-name>
+    <servlet-name>StudentServletUpdate</servlet-name>
+    <servlet-class>student.web.servlet.StudentServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentServletUpdate</servlet-name>
+    <url-pattern>/StudentServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ContactInformationServletCreate</display-name>
+    <servlet-name>ContactInformationServletCreate</servlet-name>
+    <servlet-class>contact_information.web.servlet.ContactInformationServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactInformationServletCreate</servlet-name>
+    <url-pattern>/ContactInformationServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ContactInformationServletDelete</display-name>
+    <servlet-name>ContactInformationServletDelete</servlet-name>
+    <servlet-class>contact_information.web.servlet.ContactInformationServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactInformationServletDelete</servlet-name>
+    <url-pattern>/ContactInformationServletDelete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>ContactInformationServletRead</display-name>
+    <servlet-name>ContactInformationServletRead</servlet-name>
+    <servlet-class>contact_information.web.servlet.ContactInformationServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactInformationServletRead</servlet-name>
+    <url-pattern>/ContactInformationServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ContactInformationServletUpdate</display-name>
+    <servlet-name>ContactInformationServletUpdate</servlet-name>
+    <servlet-class>contact_information.web.servlet.ContactInformationServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContactInformationServletUpdate</servlet-name>
+    <url-pattern>/ContactInformationServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CourseServletCreate</display-name>
+    <servlet-name>CourseServletCreate</servlet-name>
+    <servlet-class>course.web.servlet.CourseServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseServletCreate</servlet-name>
+    <url-pattern>/CourseServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CourseServletDelete</display-name>
+    <servlet-name>CourseServletDelete</servlet-name>
+    <servlet-class>course.web.servlet.CourseServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseServletDelete</servlet-name>
+    <url-pattern>/CourseServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CourseServletRead</display-name>
+    <servlet-name>CourseServletRead</servlet-name>
+    <servlet-class>course.web.servlet.CourseServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseServletRead</servlet-name>
+    <url-pattern>/CourseServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CourseServletUpdate</display-name>
+    <servlet-name>CourseServletUpdate</servlet-name>
+    <servlet-class>course.web.servlet.CourseServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseServletUpdate</servlet-name>
+    <url-pattern>/CourseServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>OrganizationServletCreate</display-name>
+    <servlet-name>OrganizationServletCreate</servlet-name>
+    <servlet-class>organization.web.servlet.OrganizationServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrganizationServletCreate</servlet-name>
+    <url-pattern>/OrganizationServletCreate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>OrganizationServletDelete</display-name>
+    <servlet-name>OrganizationServletDelete</servlet-name>
+    <servlet-class>organization.web.servlet.OrganizationServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrganizationServletDelete</servlet-name>
+    <url-pattern>/OrganizationServletDelete</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>OrganizationServletRead</display-name>
+    <servlet-name>OrganizationServletRead</servlet-name>
+    <servlet-class>organization.web.servlet.OrganizationServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrganizationServletRead</servlet-name>
+    <url-pattern>/OrganizationServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>OrganizationServletUpdate</display-name>
+    <servlet-name>OrganizationServletUpdate</servlet-name>
+    <servlet-class>organization.web.servlet.OrganizationServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrganizationServletUpdate</servlet-name>
+    <url-pattern>/OrganizationServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+    <description></description>
+    <display-name>CovidTestingServletCreate</display-name>
+    <servlet-name>CovidTestingServletCreate</servlet-name>
+    <servlet-class>covidTesting.web.servlet.CovidTestingServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CovidTestingServletCreate</servlet-name>
+    <url-pattern>/CovidTestingServletCreate</url-pattern>
+  </servlet-mapping>
+  
+        <servlet>
+    <description></description>
+    <display-name>CovidTestingServletDelete</display-name>
+    <servlet-name>CovidTestingServletDelete</servlet-name>
+    <servlet-class>covidTesting.web.servlet.CovidTestingServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CovidTestingServletDelete</servlet-name>
+    <url-pattern>/CovidTestingServletDelete</url-pattern>
+  </servlet-mapping>
+  
+          <servlet>
+    <description></description>
+    <display-name>CovidTestingServletRead</display-name>
+    <servlet-name>CovidTestingServletRead</servlet-name>
+    <servlet-class>covidTesting.web.servlet.CovidTestingServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CovidTestingServletRead</servlet-name>
+    <url-pattern>/CovidTestingServletRead</url-pattern>
+  </servlet-mapping>
+  
+            <servlet>
+    <description></description>
+    <display-name>CovidTestingServletUpdate</display-name>
+    <servlet-name>CovidTestingServletUpdate</servlet-name>
+    <servlet-class>covidTesting.web.servlet.CovidTestingServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CovidTestingServletUpdate</servlet-name>
+    <url-pattern>/CovidTestingServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+              <servlet>
+    <description></description>
+    <display-name>StudentHousingServletCreate</display-name>
+    <servlet-name>StudentHousingServletCreate</servlet-name>
+    <servlet-class>student_housing.web.servlet.StudentHousingServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentHousingServletCreate</servlet-name>
+    <url-pattern>/StudentHousingServletCreate</url-pattern>
+  </servlet-mapping>
+  
+                <servlet>
+    <description></description>
+    <display-name>StudentHousingServletDelete</display-name>
+    <servlet-name>StudentHousingServletDelete</servlet-name>
+    <servlet-class>student_housing.web.servlet.StudentHousingServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentHousingServletDelete</servlet-name>
+    <url-pattern>/StudentHousingServletDelete</url-pattern>
+  </servlet-mapping>
+  
+                  <servlet>
+    <description></description>
+    <display-name>StudentHousingServletRead</display-name>
+    <servlet-name>StudentHousingServletRead</servlet-name>
+    <servlet-class>student_housing.web.servlet.StudentHousingServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentHousingServletRead</servlet-name>
+    <url-pattern>/StudentHousingServletRead</url-pattern>
+  </servlet-mapping>
+  
+                   <servlet>
+    <description></description>
+    <display-name>StudentHousingServletUpdate</display-name>
+    <servlet-name>StudentHousingServletUpdate</servlet-name>
+    <servlet-class>student_housing.web.servlet.StudentHousingServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentHousingServletUpdate</servlet-name>
+    <url-pattern>/StudentHousingServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>findAll</display-name>
+    <servlet-name>findAll</servlet-name>
+    
+    <servlet-class>user.web.servlet.findAll</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findAll</servlet-name>
+    <url-pattern>/findAll</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>unvaccinatedStudents</display-name>
+    <servlet-name>unvaccinatedStudents</servlet-name>
+    
+    <servlet-class>student.web.servlet.unvaccinatedStudents</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>unvaccinatedStudents</servlet-name>
+    <url-pattern>/unvaccinatedStudents</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description></description>
+    <display-name>nonNegativeTests</display-name>
+    <servlet-name>nonNegativeTests</servlet-name>
+    
+    <servlet-class>covidTesting.web.servlet.nonNegativeTests</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>nonNegativeTests</servlet-name>
+    <url-pattern>/nonNegativeTests</url-pattern>
+  </servlet-mapping>
+  
+       <servlet>
+    <description></description>
+    <display-name>arcResidents</display-name>
+    <servlet-name>arcResidents</servlet-name>
+    
+    <servlet-class>student_housing.web.servlet.arcResidents</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>arcResidents</servlet-name>
+    <url-pattern>/arcResidents</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>testResultPercentages</display-name>
+    <servlet-name>testResultPercentages</servlet-name>
+    
+    <servlet-class>covidTesting.web.servlet.testResultPercentages</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>testResultPercentages</servlet-name>
+    <url-pattern>/testResultPercentages</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>numMembersPerOrg</display-name>
+    <servlet-name>numMembersPerOrg</servlet-name>
+    
+    <servlet-class>organization.web.servlet.numMembersPerOrg</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>numMembersPerOrg</servlet-name>
+    <url-pattern>/numMembersPerOrg</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description></description>
+    <display-name>numTests2021</display-name>
+    <servlet-name>numTests2021</servlet-name>
+    
+    <servlet-class>covidTesting.web.servlet.numTests2021</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>numTests2021</servlet-name>
+    <url-pattern>/numTests2021</url-pattern>
+  </servlet-mapping>
+  
+       <servlet>
+    <description></description>
+    <display-name>vaxStatusResidents</display-name>
+    <servlet-name>vaxStatusResidents</servlet-name>
+    
+    <servlet-class>student.web.servlet.vaxStatusResidents</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>vaxStatusResidents</servlet-name>
+    <url-pattern>/vaxStatusResidents</url-pattern>
+  </servlet-mapping>
+  
+         <servlet>
+    <description></description>
+    <display-name>studentsInOrgs</display-name>
+    <servlet-name>studentsInOrgs</servlet-name>
+    
+    <servlet-class>organization.web.servlet.studentsInOrgs</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>studentsInOrgs</servlet-name>
+    <url-pattern>/studentsInOrgs</url-pattern>
+  </servlet-mapping>
+  
+           <servlet>
+    <description></description>
+    <display-name>unvaxxedStudentsInOrgs</display-name>
+    <servlet-name>unvaxxedStudentsInOrgs</servlet-name>
+    
+    <servlet-class>organization.web.servlet.unvaxxedStudentsInOrgs</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>unvaxxedStudentsInOrgs</servlet-name>
+    <url-pattern>/unvaxxedStudentsInOrgs</url-pattern>
+  </servlet-mapping>
+
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
