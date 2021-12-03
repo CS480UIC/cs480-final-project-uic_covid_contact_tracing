@@ -56,14 +56,14 @@ public class OrganizationServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(!(organization.getUin()).equals(null)){
+			if(organization.getUin() != null){
 				request.setAttribute("organization", organization);
 				request.getRequestDispatcher("/jsps/organizationEntity/organizationEntity_update_output.jsp").forward(request, response);
 
 			}
 			else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/organizationEntity/organizationEntity_update_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/organizationEntity/organizationEntity_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))

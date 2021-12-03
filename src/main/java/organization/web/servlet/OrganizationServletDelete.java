@@ -36,12 +36,12 @@ public class OrganizationServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		OrganizationDao courseDao = new OrganizationDao();
-		Organization course = null;
+		OrganizationDao organizationDao = new OrganizationDao();
+		Organization organization = null;
 		if(method.equals("search"))
 		{
 			try {
-				course = courseDao.findByUIN(Integer.parseInt(request.getParameter("uin")));
+				organization = organizationDao.findByUIN(Integer.parseInt(request.getParameter("uin")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,21 +50,21 @@ public class OrganizationServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(!(course.getUin()).equals(null)){
-						System.out.println(course);
-						request.setAttribute("organization", course);
+			if(organization.getUin() != null){
+						System.out.println(organization);
+						request.setAttribute("organization", organization);
 						request.getRequestDispatcher("/jsps/organizationEntity/organizationEntity_delete_output.jsp").forward(request, response);			
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/organizationEntity/organizationEntity_delete_output.jsp").forward(request, response);			
+				request.getRequestDispatcher("/jsps/organizationEntity/organizationEntity_read_output.jsp").forward(request, response);			
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
 				System.out.println(request.getParameter("uin"));
-				courseDao.delete(request.getParameter("uin"));
+				organizationDao.delete(request.getParameter("uin"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
