@@ -56,14 +56,14 @@ public class CovidTestingServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(!(course.getUin()).equals(null)){
+			if(course.getUin() != null){
 				request.setAttribute("covid", course);
 				request.getRequestDispatcher("/jsps/covidTestingEntity/covidTestingEntity_update_output.jsp").forward(request, response);
 
 			}
 			else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/covidTestingEntity/covidTestingEntity_update_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/covidTestingEntity/covidTestingEntity_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))

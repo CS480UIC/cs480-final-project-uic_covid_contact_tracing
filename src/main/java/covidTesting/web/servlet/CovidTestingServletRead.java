@@ -50,8 +50,7 @@ public class CovidTestingServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(!(course.getUin()).equals(null)){
-					System.out.println(course);
+		if(course.getUin() != null){
 					request.setAttribute("covid", course);
 					request.getRequestDispatcher("/jsps/covidTestingEntity/covidTestingEntity_read_output.jsp").forward(request, response);
 			}
