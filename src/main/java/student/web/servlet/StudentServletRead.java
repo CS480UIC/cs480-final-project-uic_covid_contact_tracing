@@ -50,7 +50,7 @@ public class StudentServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(!(student.getUin()).equals(null)){
+		if(student.getUin() != null){
 					System.out.println(student);
 					request.setAttribute("student", student);
 					request.getRequestDispatcher("/jsps/studentEntity/studentEntity_read_output.jsp").forward(request, response);
