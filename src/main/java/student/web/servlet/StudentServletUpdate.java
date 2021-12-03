@@ -56,7 +56,7 @@ public class StudentServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(!(student.getUin()).equals(null)){
+			if(student.getUin() != null){
 				request.setAttribute("student", student);
 				request.getRequestDispatcher("/jsps/studentEntity/studentEntity_update_output.jsp").forward(request, response);
 
