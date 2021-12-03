@@ -122,7 +122,7 @@ public class CovidTestingDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
 			
-			String sql = "delete from test_date where uin = ?";
+			String sql = "delete from covid_test where uin = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,uin);
 		    preparestatement.executeUpdate();

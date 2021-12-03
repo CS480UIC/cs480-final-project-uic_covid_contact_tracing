@@ -50,10 +50,10 @@ public class CovidTestingServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUin(Integer.parseInt(info.get(1)));
-		form.setTest_date( java.sql.Date.valueOf(info.get(2)));
-		form.setResult_date( java.sql.Date.valueOf(info.get(3)));
-		form.setTest_result(Byte.parseByte(info.get(4)));
+		form.setUin(Integer.parseInt(info.get(0)));
+		form.setTest_date( java.sql.Date.valueOf(info.get(1)));
+		form.setResult_date( java.sql.Date.valueOf(info.get(2)));
+		form.setTest_result(Byte.parseByte(info.get(3)));
 		
 		try {
 			entity1service.create(form);
