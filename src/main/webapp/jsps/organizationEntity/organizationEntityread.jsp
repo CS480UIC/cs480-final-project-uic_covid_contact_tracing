@@ -23,9 +23,9 @@
   <body>
   <h1>Read Organization from UIN</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/OrganizationServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-		UIN    :<input type="text" name="uin" value="${organization.uin }" disabled/>
+		UIN    :<input type="text" name="uin" value="${organization.uin }"/>
 		<br/>
 	<input type="submit" value="Read Organization"/>
 </form>

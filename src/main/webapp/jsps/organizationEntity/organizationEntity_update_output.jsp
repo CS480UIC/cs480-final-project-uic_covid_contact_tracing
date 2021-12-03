@@ -35,7 +35,7 @@
 	<h1>Update the values below</h1>
 	<form action="<c:url value='/OrganizationServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-		<input type="hidden" name="uin" value="${origanization.uin }"/>
+		<input type="hidden" name="uin" value="${organization.uin }"/>
 		Organization ID：<input type="text" name="organization_id" value="${organization.organization_id }" />
 		<br/>
 		Organization Name：<input type="text" name="organization_name" value="${organization.organization_name }"/>
