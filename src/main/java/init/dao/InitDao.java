@@ -111,6 +111,7 @@ public class InitDao {
 	public void initialize() throws ClassNotFoundException {
 		// TODO Auto-generated method stub
 		try {
+			System.out.println("Attempting to initialize");
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
 						
@@ -121,15 +122,15 @@ public class InitDao {
 			String drop5 = "DROP TABLE IF EXISTS contact_information;";
 			String drop6 = "DROP TABLE IF EXISTS student;";
 			
-			String dropView = "DROP VIEW unvaccinated_students";
-			String dropView2 = "DROP VIEW covid_tests_not_negative";
-			String dropView3 = "DROP VIEW arc_residents";
-			String dropView4 = "DROP VIEW test_result_percentages";
-			String dropView5 = "DROP VIEW num_members_per_org";
-			String dropView6 = "DROP VIEW num_covid_tests_2021";
-			String dropView7 = "DROP VIEW uic_residents_vaccination_status";
-			String dropView8 = "DROP VIEW large_organizations";
-			String dropView9 = "DROP VIEW unvaccinated_students_in_orgs";
+			String dropView = "DROP VIEW IF EXISTS unvaccinated_students";
+			String dropView2 = "DROP VIEW IF EXISTS covid_tests_not_negative";
+			String dropView3 = "DROP VIEW IF EXISTS arc_residents";
+			String dropView4 = "DROP VIEW IF EXISTS test_result_percentages";
+			String dropView5 = "DROP VIEW IF EXISTS num_members_per_org";
+			String dropView6 = "DROP VIEW IF EXISTS num_covid_tests_2021";
+			String dropView7 = "DROP VIEW IF EXISTS uic_residents_vaccination_status";
+			String dropView8 = "DROP VIEW IF EXISTS large_organizations";
+			String dropView9 = "DROP VIEW IF EXISTS unvaccinated_students_in_orgs";
 						
 			String sql = "CREATE TABLE student (\r\n"
 					+ "	uin INTEGER UNSIGNED NOT NULL UNIQUE,\r\n"
