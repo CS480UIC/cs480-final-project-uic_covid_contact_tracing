@@ -56,14 +56,14 @@ public class StudentHousingServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(!(course.getUin()).equals(null)){
+			if(course.getUin() != null){
 				request.setAttribute("studentHousing", course);
 				request.getRequestDispatcher("/jsps/studentHousingEntity/studentHousingEntity_update_output.jsp").forward(request, response);
 
 			}
 			else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/studentHousingEntity/studentHousingEntity_update_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/studentHousingEntity/studentHousingEntity_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))

@@ -23,15 +23,16 @@
   <body>
   <h1>studentHousingEntity Create</h1>
 <form action="<c:url value='/StudentHousingServletCreate'/>" method="post">
+	UIN	：<input type="text" name="uin" value="${form.uin }"/>
+	<span style="color: red; font-weight: 900">${errors.uin }</span>
+	<br/>
 	dorm_id    :<input type="text" name="dorm_id" value="${form.dorm_id }"/>
 	<span style="color: red; font-weight: 900">${errors.dorm_id }</span>
 	<br/>
 	room_number：<input type="text" name="room_number" value="${form.room_number }"/>
 	<span style="color: red; font-weight: 900">${errors.room_number }</span>
 	<br/>
-	UIN	：<input type="text" name="uin" value="${form.uin }"/>
-	<span style="color: red; font-weight: 900">${errors.uin }</span>
-	<br/>
+
 	<input type="submit" value="Create studentHousingEntity"/>
 </form>
   </body>

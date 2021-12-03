@@ -50,7 +50,7 @@ public class StudentHousingServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(!(course.getUin()).equals(null)){
+		if(course.getUin() != null){
 					System.out.println(course);
 					request.setAttribute("studentHousing", course);
 					request.getRequestDispatcher("/jsps/studentHousingEntity/studentHousingEntity_read_output.jsp").forward(request, response);

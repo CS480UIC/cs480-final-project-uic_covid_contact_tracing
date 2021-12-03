@@ -50,7 +50,7 @@ public class StudentHousingServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUin(Integer.parseInt(info.get(3)));
+		form.setUin(Integer.parseInt(info.get(0)));
 		form.setDorm_id(info.get(1));
 		form.setRoom_number(Integer.parseInt(info.get(2)));
 		

@@ -34,7 +34,7 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/StudentHousingServletUpdate'/>" method="post">
 			<input type="hidden" name="method" value="update"/>
-		<input type="hidden" name="uin" value="${course.uin }"/>
+		<input type="hidden" name="uin" value="${studentHousing.uin }"/>
 	
 	UIN    :<input type="text" name="uin" value="${studentHousing.uin }" />
 	<br/>
