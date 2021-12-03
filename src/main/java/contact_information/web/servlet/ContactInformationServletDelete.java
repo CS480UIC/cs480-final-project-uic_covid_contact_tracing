@@ -56,7 +56,7 @@ public class ContactInformationServletDelete extends HttpServlet {
 						request.getRequestDispatcher("/jsps/contactInformationEntity/contactInformationEntity_delete_output.jsp").forward(request, response);			
 			}else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/contactInformationEntity/contactInformationEntity_delete_output.jsp").forward(request, response);			
+				request.getRequestDispatcher("/jsps/contactInformationEntity/contactInformationEntity_read_output.jsp").forward(request, response);			
 			}
 		}
 		else if(method.equals("delete"))

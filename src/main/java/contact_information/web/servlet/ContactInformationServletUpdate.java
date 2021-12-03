@@ -63,7 +63,7 @@ public class ContactInformationServletUpdate extends HttpServlet {
 			}
 			else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/contactInformationEntity/contactInformationEntity_update_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/contactInformationEntity/contactInformationEntity_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
