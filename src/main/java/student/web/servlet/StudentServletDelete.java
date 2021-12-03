@@ -57,7 +57,7 @@ public class StudentServletDelete extends HttpServlet {
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/studentEntity/studentEntity_delete_output.jsp").forward(request, response);			
+				request.getRequestDispatcher("/jsps/studentEntity/studentEntity_read_output.jsp").forward(request, response);			
 			}
 		}
 		else if(method.equals("delete"))

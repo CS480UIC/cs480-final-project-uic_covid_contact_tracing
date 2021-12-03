@@ -63,7 +63,7 @@ public class StudentServletUpdate extends HttpServlet {
 			}
 			else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/studentEntity/studentEntity_update_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/studentEntity/studentEntity_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
