@@ -41,7 +41,7 @@ public class CourseServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		CourseService entity1service = new CourseService();
+		CourseService courseService = new CourseService();
 		Map<String,String[]> paramMap = request.getParameterMap();
 		Course form = new Course();
 		List<String> info = new ArrayList<String>();
@@ -50,12 +50,13 @@ public class CourseServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUin(Integer.parseInt(info.get(3)));
-		form.setCourse_location(info.get(2));
+		form.setUin(Integer.parseInt(info.get(0)));
 		form.setCourse_id(Double.parseDouble(info.get(1)));
+		form.setCourse_location(info.get(2));
+		
 		
 		try {
-			entity1service.create(form);
+			courseService.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
 		} catch (ClassNotFoundException | CourseException e) {
