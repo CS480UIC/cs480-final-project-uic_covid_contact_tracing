@@ -50,14 +50,14 @@ public class CourseServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(!(course.getUin()).equals(null)){
+			if(course.getUin() != null){
 						System.out.println(course);
 						request.setAttribute("course", course);
 						request.getRequestDispatcher("/jsps/courseEntity/courseEntity_delete_output.jsp").forward(request, response);			
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/courseEntity/courseEntity_delete_output.jsp").forward(request, response);			
+				request.getRequestDispatcher("/jsps/courseEntity/courseEntity_read_output.jsp").forward(request, response);			
 			}
 		}
 		else if(method.equals("delete"))

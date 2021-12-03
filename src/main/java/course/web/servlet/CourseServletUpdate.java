@@ -56,14 +56,14 @@ public class CourseServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(!(course.getUin()).equals(null)){
+			if(course.getUin() != null){
 				request.setAttribute("course", course);
 				request.getRequestDispatcher("/jsps/courseEntity/courseEntity_update_output.jsp").forward(request, response);
 
 			}
 			else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/courseEntity/courseEntity_update_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/courseEntity/courseEntity_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
