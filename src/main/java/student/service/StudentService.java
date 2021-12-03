@@ -3,8 +3,10 @@ package student.service;
 
 import java.util.List;
 
-import student.dao.CourseDao;
-import student.domain.Course;
+//import student.dao.StudentDao;
+//import student.domain.Student;
+import student.dao.StudentDao;
+import student.domain.Student;
 
 /**
  * logic functions such as register, login
@@ -12,7 +14,7 @@ import student.domain.Course;
  *
  */
 public class StudentService {
-	private CourseDao studentDao = new CourseDao();
+	private StudentDao studentDao = new StudentDao();
 	
 	/**
 	 * register a Student
@@ -21,9 +23,9 @@ public class StudentService {
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
-	public void create(Course form) throws StudentException, ClassNotFoundException, InstantiationException, IllegalAccessException{
+	public void create(Student form) throws StudentException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		Course student = studentDao.findByUIN(form.getUin());
+		Student student = studentDao.findByUIN(form.getUin());
 		if(student.getUin()!=null && ((student.getUin()).equals(form.getUin()))) throw new StudentException("This UIN has been registered!");
 		studentDao.add(form);
 	}

@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import student.dao.CourseDao;
-import student.domain.Course;
+import student.dao.StudentDao;
+import student.domain.Student;
 
 
 /**
@@ -37,8 +37,8 @@ public class StudentServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Course student = null;
-		CourseDao studentDao = new CourseDao();
+		Student student = null;
+		StudentDao studentDao = new StudentDao();
 		
 		try {
 			student = studentDao.findByUIN(Integer.parseInt(request.getParameter("uin")));

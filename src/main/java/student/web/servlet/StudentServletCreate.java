@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import student.domain.Course;
+import student.domain.Student;
 import student.service.StudentException;
 import student.service.StudentService;
 
@@ -43,7 +43,7 @@ public class StudentServletCreate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		StudentService entity1service = new StudentService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Course form = new Course();
+		Student form = new Student();
 		List<String> info = new ArrayList<String>();
 
 		for(String name : paramMap.keySet()) {

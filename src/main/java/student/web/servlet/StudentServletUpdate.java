@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import student.dao.CourseDao;
-import student.domain.Course;
+import student.dao.StudentDao;
+import student.domain.Student;
 
 /**
  * Servlet implementation class UserServlet
@@ -41,8 +41,8 @@ public class StudentServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		CourseDao studentDao = new CourseDao();
-		Course student = null;
+		StudentDao studentDao = new StudentDao();
+		Student student = null;
 
 		if(method.equals("search"))
 		{
@@ -69,7 +69,7 @@ public class StudentServletUpdate extends HttpServlet {
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Course form = new Course();
+			Student form = new Student();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {

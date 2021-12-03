@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import student.dao.CourseDao;
-import student.domain.Course;
+import student.dao.StudentDao;
+import student.domain.Student;
 
 
 /**
@@ -36,8 +36,8 @@ public class StudentServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		CourseDao studentDao = new CourseDao();
-		Course student = null;
+		StudentDao studentDao = new StudentDao();
+		Student student = null;
 		if(method.equals("search"))
 		{
 			try {

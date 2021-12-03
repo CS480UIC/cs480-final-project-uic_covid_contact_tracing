@@ -11,13 +11,13 @@ import java.util.List;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import student.domain.Course;
+import student.domain.Student;
 import user.domain.User;
 
 /**
  * DDL functions performed in database
  */
-public class CourseDao {
+public class StudentDao {
 	
 	/**
 	 * user name to connect to the database 
@@ -29,8 +29,8 @@ public class CourseDao {
 	 */
 	private String MySQL_password = "covid"; //TODO change password
 
-	public Course findByUIN(Integer uin_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Course student = new Course();
+	public Student findByUIN(Integer uin_p) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Student student = new Student();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
@@ -71,7 +71,7 @@ public class CourseDao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Course form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(Student form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
@@ -100,7 +100,7 @@ public class CourseDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void update(Course form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(Student form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/uic_covid_contact_tracing", MySQL_user, MySQL_password);
@@ -155,7 +155,7 @@ public class CourseDao {
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				Course student = new Course();
+				Student student = new Student();
 				student.setUin(resultSet.getInt("uin"));
 				student.setVaccination_status(resultSet.getByte("vaccination_status"));
 				student.setFirst_name(resultSet.getString("first_name"));
@@ -181,7 +181,7 @@ public class CourseDao {
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				Course student = new Course();
+				Student student = new Student();
 				student.setUin(resultSet.getInt("uin"));
 				student.setVaccination_status(resultSet.getByte("vaccination_status"));
 				student.setFirst_name(resultSet.getString("first_name"));
